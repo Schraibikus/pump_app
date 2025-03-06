@@ -81,7 +81,7 @@ export const HeaderBar = () => {
         top: 0,
         height: 70,
         zIndex: 50,
-        backgroundImage: "url(/png/tile_background_4.png)",
+        // backgroundImage: "url(/png/tile_background_4.png)",
         backdropFilter: isHeaderVisible ? "blur(5px)" : "none", // Размытие при скролле
         WebkitBackdropFilter: isHeaderVisible ? "blur(5px)" : "none", // Для Safari
         transition: "backdrop-filter 0.3s ease-in-out",
