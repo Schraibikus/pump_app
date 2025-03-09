@@ -52,6 +52,7 @@ export const ProductGroupPage = () => {
     <Box
       sx={{
         columnCount: 3,
+        textAlign: "center",
         p: 4,
       }}
     >
@@ -60,9 +61,14 @@ export const ProductGroupPage = () => {
           <Button
             sx={{
               breakInside: "avoid-column",
-              width: "100%",
+
+              width: "70%",
               my: 1,
+              transition: "all 0.3s ease-in-out",
               "&:last-child": { color: "red" },
+              "&:hover": {
+                transform: "scale(1.05)",
+              },
             }}
             key={id}
             variant="contained"
