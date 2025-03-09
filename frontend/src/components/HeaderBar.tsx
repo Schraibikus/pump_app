@@ -118,8 +118,8 @@ export const HeaderBar = () => {
           }}
         >
           <Tab label="На главную" />
-          <Tab label="Изделиe 1" />
-          <Tab label="Изделиe 2" />
+          <Tab label="СИН32.02" />
+          <Tab label="СИН32.00" />
           <Tab label="Заказы" />
         </Tabs>
       </Box>
