@@ -102,6 +102,7 @@ export const SchemeBuilder = ({
     // Сбрасываем количество при изменении выбранной части
     setQuantity(1);
     setIncludeComment(false);
+    setComment("");
   }, [selectedItem]);
 
   const handleAddToOrder = () => {
