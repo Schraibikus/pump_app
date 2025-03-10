@@ -128,7 +128,8 @@ async function setupDatabase() {
         positioning_left4 INT NULL,
         positioning_top5 INT NULL,
         positioning_left5 INT NULL,
-        selected_set VARCHAR(255) NULL, -- Добавляем поле selected_set
+        selected_set VARCHAR(255) NULL, 
+        comment TEXT NULL,
         FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE,
         FOREIGN KEY (part_id) REFERENCES parts(id) ON DELETE CASCADE
       )

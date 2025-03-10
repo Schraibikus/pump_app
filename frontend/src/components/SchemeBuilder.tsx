@@ -13,6 +13,8 @@ import {
   MenuItem,
   InputAdornment,
   Tooltip,
+  Checkbox,
+  FormControlLabel,
 } from "@mui/material";
 import { Add, Remove } from "@mui/icons-material";
 import InfoIcon from "@mui/icons-material/Info";
@@ -49,6 +51,8 @@ export const SchemeBuilder = ({
   const [orderOpen, setOrderOpen] = useState(false);
   const [quantity, setQuantity] = useState<number>(1);
   const [lastSelectedSet, setLastSelectedSet] = useState<string>("");
+  const [includeComment, setIncludeComment] = useState(false);
+  const [comment, setComment] = useState("");
 
   const handleIncrement = () => setQuantity((prev) => prev + 1);
   const handleDecrement = () =>
@@ -97,6 +101,7 @@ export const SchemeBuilder = ({
   useEffect(() => {
     // Сбрасываем количество при изменении выбранной части
     setQuantity(1);
+    setIncludeComment(false);
   }, [selectedItem]);
 
   const handleAddToOrder = () => {
@@ -111,6 +116,7 @@ export const SchemeBuilder = ({
         ...(selectedItem.selectedSet && selectedItem.alternativeSets
           ? selectedItem.alternativeSets[selectedItem.selectedSet]
           : {}),
+        comment: includeComment ? comment : undefined,
       };
 
       setQuantity(1);
@@ -366,6 +372,7 @@ export const SchemeBuilder = ({
                       </FormControl>
                     </Box>
                   )}
+
                   <Box>
                     <TextField
                       label="Количество"
@@ -404,27 +411,78 @@ export const SchemeBuilder = ({
                         },
                       }}
                     />
-                    <Box>
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        onClick={handleConfirmAddToOrder}
-                        sx={{ mt: 2, mr: 2 }}
-                        disabled={
-                          hasAlternativeSets && !selectedItem.selectedSet
-                        }
+                  </Box>
+                  {/* Чекбокс и поле для комментария */}
+                  <Box sx={{ mt: 2 }}>
+                    <FormControlLabel
+                      control={
+                        <Checkbox
+                          checked={includeComment}
+                          onChange={(e) => setIncludeComment(e.target.checked)}
+                        />
+                      }
+                      label="Добавить комментарий"
+                    />
+                    {includeComment && comment.trim() === "" && (
+                      <Tooltip
+                        title="Поле комментария не может быть пустым"
+                        arrow
                       >
-                        Добавить в заказ
-                      </Button>
-                      <Button
-                        variant="contained"
-                        color="secondary"
-                        onClick={handleClose}
-                        sx={{ mt: 2 }}
-                      >
-                        Закрыть
-                      </Button>
-                    </Box>
+                        <InfoIcon
+                          color="error"
+                          sx={{ ml: 1, mb: 1, verticalAlign: "middle" }}
+                        />
+                      </Tooltip>
+                    )}
+                    {includeComment && (
+                      <TextField
+                        sx={{ mt: 1 }}
+                        multiline
+                        fullWidth
+                        label="Ваш комментарий"
+                        value={comment}
+                        // placeholder={TEXTAREA_PLACEHOLDER}
+                        onChange={(event) => setComment(event.target.value)}
+                        slotProps={{
+                          input: {
+                            sx: { background: "white" },
+                            endAdornment: comment && (
+                              <InputAdornment position="end">
+                                <IconButton
+                                  aria-label="Очистить комментарий"
+                                  onClick={() => setComment("")}
+                                  edge="end"
+                                >
+                                  <DeleteIcon sx={{ color: "red" }} />
+                                </IconButton>
+                              </InputAdornment>
+                            ),
+                          },
+                        }}
+                      />
+                    )}
+                  </Box>
+                  <Box>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      onClick={handleConfirmAddToOrder}
+                      sx={{ mt: 2, mr: 2 }}
+                      disabled={
+                        (hasAlternativeSets && !selectedItem.selectedSet) ||
+                        (includeComment && comment.trim() === "")
+                      }
+                    >
+                      Добавить в заказ
+                    </Button>
+                    <Button
+                      variant="contained"
+                      color="secondary"
+                      onClick={handleClose}
+                      sx={{ mt: 2 }}
+                    >
+                      Закрыть
+                    </Button>
                   </Box>
                 </Box>
               )}
@@ -559,7 +617,7 @@ export const SchemeBuilder = ({
                       <IconButton
                         onClick={() => handleRemoveFromOrder(part.id)}
                       >
-                        <DeleteIcon />
+                        <DeleteIcon sx={{ color: "red" }} />
                       </IconButton>
                     </Box>
                   );

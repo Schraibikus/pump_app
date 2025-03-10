@@ -42,6 +42,7 @@ export interface PartItem {
     };
   };
   selectedSet?: string;
+  comment?: string;
 }
 
 export interface Order {

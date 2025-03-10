@@ -69,9 +69,11 @@ function startServer() {
           pas.description AS alt_description,
           pas.designation AS alt_designation,
           pas.quantity AS alt_quantity,
-          pas.drawing AS alt_drawing
+          pas.drawing AS alt_drawing,
+          op.comment AS comment
         FROM parts p
         LEFT JOIN part_alternative_sets pas ON p.id = pas.part_id
+        LEFT JOIN order_parts op ON p.id = op.part_id
         WHERE p.product_id = $1
         `,
         [id]
@@ -100,6 +102,7 @@ function startServer() {
             positioningTop5: row.positioning_top5,
             positioningLeft5: row.positioning_left5,
             selectedSet: row.selected_set,
+            comment: row.comment,
             alternativeSets: {},
           };
         }
@@ -166,6 +169,7 @@ function startServer() {
         part.positioningTop5 ?? null,
         part.positioningLeft5 ?? null,
         part.selectedSet || null,
+        part.comment || null,
       ]);
 
       // Форматируем запрос с помощью pg-format
@@ -178,7 +182,7 @@ function startServer() {
         positioning_top3, positioning_left3,
         positioning_top4, positioning_left4,
         positioning_top5, positioning_left5,
-        selected_set
+        selected_set, comment
       ) VALUES %L`,
         rowsData
       );
