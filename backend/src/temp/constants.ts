@@ -2785,7 +2785,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
   width: 120,
   name: "Редуктор планетарно-цилиндрический СИН32",
   drawing: 15,
-  head: 1,
+  head: 2,
   parts: [
     {
       id: 1,
