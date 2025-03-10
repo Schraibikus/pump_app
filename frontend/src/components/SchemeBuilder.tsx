@@ -613,6 +613,17 @@ export const SchemeBuilder = ({
                             {part.quantity}
                           </Typography>
                         </Typography>
+                        {part.comment && (
+                          <Typography variant="body2">
+                            Комментарий:{" "}
+                            <Typography
+                              component={"span"}
+                              sx={{ fontWeight: 700 }}
+                            >
+                              {part.comment}
+                            </Typography>
+                          </Typography>
+                        )}
                       </Box>
                       <IconButton
                         onClick={() => handleRemoveFromOrder(part.id)}

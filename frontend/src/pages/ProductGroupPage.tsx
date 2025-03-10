@@ -65,7 +65,7 @@ export const ProductGroupPage = () => {
               width: "70%",
               my: 1,
               transition: "all 0.3s ease-in-out",
-              "&:last-child": { color: "red" },
+              // "&:last-child": { color: "red" },
               "&:hover": {
                 transform: "scale(1.05)",
               },

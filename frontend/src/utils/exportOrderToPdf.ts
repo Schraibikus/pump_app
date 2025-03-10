@@ -44,7 +44,7 @@ export const exportOrderToPdf = (order: Order, fileName: string) => {
 
     Object.entries(groupedParts).forEach(([productName, parts]) => {
       // Добавляем заголовок группы в тело таблицы
-      tableData.push([productName, "", ""]); // Пустые колонки для единообразия
+      tableData.push([productName, "", "", ""]); // Пустые колонки для единообразия
 
       // Добавляем детали
       parts.forEach((part) => {
@@ -59,6 +59,7 @@ export const exportOrderToPdf = (order: Order, fileName: string) => {
           part.name,
           designationAndDescription,
           String(part.quantity),
+          String(part.comment),
         ]);
       });
     });
@@ -88,6 +89,13 @@ export const exportOrderToPdf = (order: Order, fileName: string) => {
               halign: "center",
             },
           },
+          {
+            content: "Комментарий",
+            styles: {
+              font: "TimesNewRomanBold",
+              halign: "center",
+            },
+          },
         ],
         ...tableData.map((row) =>
           typeof row[0] === "string" && groupedParts[row[0]]
@@ -96,6 +104,7 @@ export const exportOrderToPdf = (order: Order, fileName: string) => {
                   content: `${row[0]}:`,
                   styles: { fontStyle: "bold", font: "TimesNewRomanBold" },
                 }, // productName жирный + двоеточие
+                "",
                 "",
                 "",
               ]
@@ -121,6 +130,7 @@ export const exportOrderToPdf = (order: Order, fileName: string) => {
         0: { halign: "left" },
         1: { halign: "left" },
         2: { halign: "center" },
+        3: { halign: "left" },
       },
     } as UserOptions);
   } else {

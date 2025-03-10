@@ -100,6 +100,19 @@ export const exportOrderToDoc = (order: Order, fileName: string) => {
               }),
             ],
           }),
+          new TableCell({
+            children: [
+              new Paragraph({
+                children: [
+                  new TextRun({
+                    text: "Комментарий",
+                    bold: true,
+                  }),
+                ],
+                alignment: "center",
+              }),
+            ],
+          }),
         ],
       })
     );
@@ -128,6 +141,17 @@ export const exportOrderToDoc = (order: Order, fileName: string) => {
                   children: [
                     new TextRun({
                       text: "", // Пустой второй столбец
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            new TableCell({
+              children: [
+                new Paragraph({
+                  children: [
+                    new TextRun({
+                      text: "", // Пустой третий столбец
                     }),
                   ],
                 }),
@@ -190,6 +214,17 @@ export const exportOrderToDoc = (order: Order, fileName: string) => {
                       }),
                     ],
                     alignment: "center",
+                  }),
+                ],
+              }),
+              new TableCell({
+                children: [
+                  new Paragraph({
+                    children: [
+                      new TextRun({
+                        text: String(part.comment),
+                      }),
+                    ],
                   }),
                 ],
               }),

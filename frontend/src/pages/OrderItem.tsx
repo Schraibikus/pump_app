@@ -95,6 +95,9 @@ export const OrderItem = ({
                       Обозначение
                     </TableCell>
                     <TableCell sx={{ fontWeight: "bold" }}>Кол-во</TableCell>
+                    <TableCell sx={{ fontWeight: "bold" }}>
+                      Коментарий
+                    </TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -110,7 +113,7 @@ export const OrderItem = ({
                   ).map(([productName, parts]) => (
                     <Fragment key={productName}>
                       <TableRow sx={{ backgroundColor: "#e0e0e0" }}>
-                        <TableCell colSpan={3} sx={{ fontWeight: "bold" }}>
+                        <TableCell colSpan={4} sx={{ fontWeight: "bold" }}>
                           {productName}:
                         </TableCell>
                       </TableRow>
@@ -123,6 +126,7 @@ export const OrderItem = ({
                               : part.designation || part.description || "—"}
                           </TableCell>
                           <TableCell>{part.quantity}</TableCell>
+                          <TableCell>{part.comment}</TableCell>
                         </TableRow>
                       ))}
                     </Fragment>
