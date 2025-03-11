@@ -45,51 +45,7 @@ export const products = [
     name: "Редуктор планетарно-цилиндрический СИН32",
   },
 ];
-// export const products = [
-//   {
-//     head: "СИН32.02",
-//     path: "three-plunger-pump",
-//     name: "Насос трёхплунжерный СИН32.02",
-//   },
-//   { head: "СИН32.02", path: "connecting-rod", name: "Шатун СИН32.02" },
-//   { head: "СИН32.02", path: "traction-unit", name: "Узел тяги" },
-//   { head: "СИН32.02", path: "waterworks", name: "Гидроузел СИН32.02" },
-//   { head: "СИН32.02", path: "collector", name: "Коллектор СИН32.02" },
-//   { head: "СИН32.02", path: "valve", name: "Клапан СИН32.00" },
-//   { head: "СИН32.02", path: "valveTwo", name: "Клапан СИН63.00" },
-//   {
-//     head: "СИН32.02",
-//     path: "plungerSeal",
-//     name: "Уплотнение плунжера СИН32.02",
-//   },
-//   { head: "СИН32.02", path: "sealPackage", name: "Пакет уплотнений СИН32.00" },
-//   { head: "СИН32.02", path: "housingSeal", name: "Уплотнение корпуса" },
-//   {
-//     head: "СИН32.02",
-//     path: "installingTheSensorIndicator",
-//     name: "Установка индикатора датчика (до №3651)",
-//   },
-//   {
-//     head: "СИН32.02",
-//     path: "installingTheSensorIndicatorTwo",
-//     name: "Установка индикатора датчика (с №3651)",
-//   },
-//   {
-//     head: "СИН32.02",
-//     path: "plungerLubricationSystem",
-//     name: "ТСистема смазки плунжеров СИН32.02",
-//   },
-//   {
-//     head: "СИН32.02",
-//     path: "pumpLubricationSystem",
-//     name: "Система смазки насоса СИН32.02",
-//   },
-//   {
-//     head: "СИН32.00",
-//     path: "planetaryCylindricalGearbox",
-//     name: "Редуктор планетарно-цилиндрический СИН32",
-//   },
-// ];
+
 
 export const threePlungerPumpLinks: Product = {
   id: 1,
@@ -572,6 +528,66 @@ export const threePlungerPumpLinks: Product = {
       drawing: 3,
       positioningTop: 73,
       positioningLeft: 82,
+      alternativeSets: {
+        "СИН32.02.100.000 (D пл. 100 мм, азот)": {
+          position: 48,
+          name: "Узел тяги",
+          designation: "СИН32.02.105.000",
+          quantity: 3,
+          drawing: 3,
+        },
+        "СИН32.02.100.000-01 (D пл. 100 мм, хром)": {
+          position: 48,
+          name: "Узел тяги",
+          designation: "СИН32.02.105.000",
+          quantity: 3,
+          drawing: 3,
+        },
+        "СИН32.02.100.000-02 (D пл. 125 мм, азот)": {
+          position: 48,
+          name: "Узел тяги",
+          designation: "СИН32.02.105.000-01",
+          quantity: 3,
+          drawing: 3,
+        },
+        "СИН32.02.100.000-03 (D пл. 125 мм, хром)": {
+          position: 48,
+          name: "Узел тяги",
+          designation: "СИН32.02.105.000-01",
+          quantity: 3,
+          drawing: 3,
+        },
+        "СИН32.02.100.000-04 (D пл. 100 мм, азот)": {
+          position: 48,
+          name: "Узел тяги",
+          designation: "СИН32.02.105.000",
+
+          quantity: 3,
+          drawing: 3,
+        },
+        "СИН32.02.100.000-05 (D пл. 100 мм, хром)": {
+          position: 48,
+          name: "Узел тяги",
+          designation: "СИН32.02.105.000",
+
+          quantity: 3,
+          drawing: 3,
+        },
+        "СИН32.02.100.000-06 (D пл. 125 мм, азот)": {
+          position: 48,
+          name: "Узел тяги",
+          designation: "СИН32.02.105.000-01",
+          quantity: 3,
+          drawing: 3,
+        },
+        "СИН32.02.100.000-07 (D пл. 125 мм, хром)": {
+          position: 48,
+          name: "Узел тяги",
+          designation: "СИН32.02.105.000-01",
+          quantity: 3,
+          drawing: 3,
+        },
+      },
     },
     {
       id: 40,
@@ -586,6 +602,58 @@ export const threePlungerPumpLinks: Product = {
       drawing: 4,
       positioningTop: 49,
       positioningLeft: 82,
+      alternativeSets: {
+        "СИН32.02.100.000 (D пл. 100 мм, азот)": {
+          position: 49,
+          name: "Гидроузел",
+          designation: "СИН32.02.109.000",
+          quantity: 1,
+          drawing: 4,
+        },
+        "СИН32.02.100.000-01 (D пл. 100 мм, хром)": {
+          position: 49,
+          name: "Гидроузел",
+          designation: "СИН32.02.109.000-01",
+          quantity: 1,
+        },
+        "СИН32.02.100.000-02 (D пл. 125 мм, азот)": {
+          position: 49,
+          name: "Гидроузел",
+          designation: "СИН32.02.109.000-02",
+          quantity: 1,
+          drawing: 4,
+        },
+        "СИН32.02.100.000-03 (D пл. 125 мм, хром)": {
+          position: 49,
+          name: "Гидроузел",
+          designation: "СИН32.02.109.000-03",
+          quantity: 1,
+        },
+        "СИН32.02.100.000-04 (D пл. 100 мм, азот)": {
+          position: 49,
+          name: "Гидроузел",
+          designation: "СИН32.02.109.000",
+          quantity: 1,
+        },
+        "СИН32.02.100.000-05 (D пл. 100 мм, хром)": {
+          position: 49,
+          name: "Гидроузел",
+          designation: "СИН32.02.109.000-01",
+          quantity: 1,
+        },
+        "СИН32.02.100.000-06 (D пл. 125 мм, азот)": {
+          position: 49,
+          name: "Гидроузел",
+          designation: "СИН32.02.109.000-02",
+          quantity: 1,
+        },
+        "СИН32.02.100.000-07 (D пл. 125 мм, хром)": {
+          position: 49,
+          name: "Гидроузел",
+          designation: "СИН32.02.109.000-03",
+          quantity: 1,
+        },
+      },
     },
     {
       id: 41,
@@ -599,6 +667,56 @@ export const threePlungerPumpLinks: Product = {
       quantity: 1,
       positioningTop: 77,
       positioningLeft: 16,
+      alternativeSets: {
+        "СИН32.02.100.000 (D пл. 100 мм, азот)": {
+          position: 50,
+          name: "Корпус",
+          designation: "СИН32.02.111.000",
+          quantity: 1,
+        },
+        "СИН32.02.100.000-01 (D пл. 100 мм, хром)": {
+          position: 50,
+          name: "Корпус",
+          designation: "СИН32.02.111.000",
+          quantity: 1,
+        },
+        "СИН32.02.100.000-02 (D пл. 125 мм, азот)": {
+          position: 50,
+          name: "Корпус",
+          designation: "СИН32.02.111.000",
+          quantity: 1,
+        },
+        "СИН32.02.100.000-03 (D пл. 125 мм, хром)": {
+          position: 50,
+          name: "Корпус",
+          designation: "СИН32.02.111.000",
+          quantity: 1,
+        },
+        "СИН32.02.100.000-04 (D пл. 100 мм, азот)": {
+          position: 50,
+          name: "Корпус",
+          designation: "СИН32.02.111.000-01",
+          quantity: 1,
+        },
+        "СИН32.02.100.000-05 (D пл. 100 мм, хром)": {
+          position: 50,
+          name: "Корпус",
+          designation: "СИН32.02.111.000-01",
+          quantity: 1,
+        },
+        "СИН32.02.100.000-06 (D пл. 125 мм, азот)": {
+          position: 50,
+          name: "Корпус",
+          designation: "СИН32.02.111.000-01",
+          quantity: 1,
+        },
+        "СИН32.02.100.000-07 (D пл. 125 мм, хром)": {
+          position: 50,
+          name: "Корпус",
+          designation: "СИН32.02.111.000-01",
+          quantity: 1,
+        },
+      },
     },
     {
       id: 42,
@@ -612,6 +730,56 @@ export const threePlungerPumpLinks: Product = {
       quantity: 3,
       positioningTop: 56,
       positioningLeft: 82,
+      alternativeSets: {
+        "СИН32.02.100.000 (D пл. 100 мм, азот)": {
+          position: 51,
+          name: "Плунжер",
+          designation: "СИН32.02.108.003-01",
+          quantity: 3,
+        },
+        "СИН32.02.100.000-01 (D пл. 100 мм, хром)": {
+          position: 51,
+          name: "Плунжер",
+          designation: "СИН32.02.108.003",
+          quantity: 3,
+        },
+        "СИН32.02.100.000-02 (D пл. 125 мм, азот)": {
+          position: 51,
+          name: "Плунжер",
+          designation: "СИН32.02.108.003-03",
+          quantity: 3,
+        },
+        "СИН32.02.100.000-03 (D пл. 125 мм, хром)": {
+          position: 51,
+          name: "Плунжер",
+          designation: "СИН32.02.108.003-02",
+          quantity: 3,
+        },
+        "СИН32.02.100.000-04 (D пл. 100 мм, азот)": {
+          position: 51,
+          name: "Плунжер",
+          designation: "СИН32.02.108.003-01",
+          quantity: 3,
+        },
+        "СИН32.02.100.000-05 (D пл. 100 мм, хром)": {
+          position: 51,
+          name: "Плунжер",
+          designation: "СИН32.02.108.003",
+          quantity: 3,
+        },
+        "СИН32.02.100.000-06 (D пл. 125 мм, азот)": {
+          position: 51,
+          name: "Плунжер",
+          designation: "СИН32.02.108.003-03",
+          quantity: 3,
+        },
+        "СИН32.02.100.000-07 (D пл. 125 мм, хром)": {
+          position: 51,
+          name: "Плунжер",
+          designation: "СИН32.02.108.003-02",
+          quantity: 3,
+        },
+      },
     },
   ],
 };
@@ -782,6 +950,20 @@ export const tractionUnitLinks: Product = {
       quantity: 1,
       positioningTop: 3,
       positioningLeft: 15,
+      alternativeSets: {
+        "СИН32.02.105.000 (D пл. 100 мм)": {
+          position: 1,
+          name: "Тяга",
+          designation: "СИН32.02.105.001",
+          quantity: 1,
+        },
+        "СИН32.02.105.000-01 (D пл. 125 мм)": {
+          position: 1,
+          name: "Тяга",
+          designation: "СИН32.02.105.001",
+          quantity: 1,
+        },
+      },
     },
     {
       id: 2,
@@ -795,6 +977,20 @@ export const tractionUnitLinks: Product = {
       quantity: 1,
       positioningTop: 3,
       positioningLeft: 63,
+      alternativeSets: {
+        "СИН32.02.105.000 (D пл. 100 мм)": {
+          position: 2,
+          name: "Штифт",
+          designation: "СИН61.01.103.005",
+          quantity: 1,
+        },
+        "СИН32.02.105.000-01 (D пл. 125 мм)": {
+          position: 2,
+          name: "Штифт",
+          designation: "СИН61.01.103.005-01",
+          quantity: 1,
+        },
+      },
     },
     {
       id: 3,
@@ -808,6 +1004,20 @@ export const tractionUnitLinks: Product = {
       quantity: 4,
       positioningTop: 3,
       positioningLeft: 82,
+      alternativeSets: {
+        "СИН32.02.105.000 (D пл. 100 мм)": {
+          position: 3,
+          name: "Упор",
+          designation: "СИН32.04.100.10.00.003",
+          quantity: 1,
+        },
+        "СИН32.02.105.000-01 (D пл. 125 мм)": {
+          position: 3,
+          name: "Упор",
+          designation: "СИН32.04.100.10.00.003-01",
+          quantity: 1,
+        },
+      },
     },
     {
       id: 4,
@@ -821,6 +1031,20 @@ export const tractionUnitLinks: Product = {
       quantity: 1,
       positioningTop: 3,
       positioningLeft: 95,
+      alternativeSets: {
+        "СИН32.02.105.000 (D пл. 100 мм)": {
+          position: 4,
+          name: "Футорка",
+          designation: "СИН32.04.100.10.00.004",
+          quantity: 1,
+        },
+        "СИН32.02.105.000-01 (D пл. 125 мм)": {
+          position: 4,
+          name: "Футорка",
+          designation: "СИН32.04.100.10.00.004-01",
+          quantity: 1,
+        },
+      },
     },
   ],
 };
@@ -1006,6 +1230,32 @@ export const waterworksLinks: Product = {
       quantity: 3,
       positioningTop: 59,
       positioningLeft: 2,
+      alternativeSets: {
+        "СИН32.02.109.000 (D пл. 100 мм, азот)": {
+          position: 13,
+          name: "Уплотнение плунжера",
+          designation: "СИН32.02.108.500",
+          quantity: 3,
+        },
+        "СИН32.02.109.000-01 (D пл. 100 мм, хром)": {
+          position: 13,
+          name: "Уплотнение плунжера",
+          designation: "СИН32.02.108.500-01",
+          quantity: 3,
+        },
+        "СИН32.02.109.000-02 (D пл. 125 мм, азот)": {
+          position: 13,
+          name: "Уплотнение плунжера",
+          designation: "СИН32.02.108.500-02",
+          quantity: 3,
+        },
+        "СИН32.02.109.000-03 (D пл. 125 мм, хром)": {
+          position: 13,
+          name: "Уплотнение плунжера",
+          designation: "СИН32.02.108.500-03",
+          quantity: 3,
+        },
+      },
     },
     {
       id: 14,
@@ -1020,6 +1270,32 @@ export const waterworksLinks: Product = {
       positioningLeft: 89,
       positioningTop2: 26,
       positioningLeft2: 2,
+      alternativeSets: {
+        "СИН32.02.109.000 (D пл. 100 мм, азот)": {
+          position: 14,
+          name: "Клапан",
+          designation: "СИН32.00.108.600",
+          quantity: 6,
+        },
+        "СИН32.02.109.000-01 (D пл. 100 мм, хром)": {
+          position: 14,
+          name: "Клапан",
+          designation: "СИН32.00.108.600",
+          quantity: 6,
+        },
+        "СИН32.02.109.000-02 (D пл. 125 мм, азот)": {
+          position: 14,
+          name: "Клапан",
+          designation: "СИН32.00.108.600",
+          quantity: 6,
+        },
+        "СИН32.02.109.000-03 (D пл. 125 мм, хром)": {
+          position: 14,
+          name: "Клапан",
+          designation: "СИН32.00.108.600",
+          quantity: 6,
+        },
+      },
     },
     {
       id: 15,
@@ -1034,6 +1310,32 @@ export const waterworksLinks: Product = {
       positioningLeft: 89,
       positioningTop2: 29,
       positioningLeft2: 2,
+      alternativeSets: {
+        "СИН32.02.109.000 (D пл. 100 мм, азот)": {
+          position: 14,
+          name: "Седло",
+          designation: "СИН63.01.108.800",
+          quantity: 6,
+        },
+        "СИН32.02.109.000-01 (D пл. 100 мм, хром)": {
+          position: 14,
+          name: "Седло",
+          designation: "СИН63.01.108.800",
+          quantity: 6,
+        },
+        "СИН32.02.109.000-02 (D пл. 125 мм, азот)": {
+          position: 14,
+          name: "Седло",
+          designation: "СИН63.01.108.800",
+          quantity: 6,
+        },
+        "СИН32.02.109.000-03 (D пл. 125 мм, хром)": {
+          position: 14,
+          name: "Седло",
+          designation: "СИН63.01.108.800",
+          quantity: 6,
+        },
+      },
     },
   ],
 };
@@ -1239,6 +1541,26 @@ export const plungerSealLinks: Product = {
       quantity: 1,
       positioningTop: 2,
       positioningLeft: 17,
+      alternativeSets: {
+        "СИН32.02.108.500-01 (D пл. 100 мм, хром)": {
+          position: 1,
+          name: "Гайка",
+          designation: "СИН32.02.108.502",
+          quantity: 1,
+        },
+        "СИН32.02.108.500-02 (D пл. 125мм, азот)": {
+          position: 1,
+          name: "Гайка",
+          designation: "СИН32.02.108.502-01",
+          quantity: 1,
+        },
+        "СИН32.02.108.500-03 (D пл. 125 мм, хром)": {
+          position: 1,
+          name: "Гайка",
+          designation: "СИН32.02.108.502-01",
+          quantity: 1,
+        },
+      },
     },
     {
       id: 2,
@@ -1251,6 +1573,26 @@ export const plungerSealLinks: Product = {
       quantity: 1,
       positioningTop: 2,
       positioningLeft: 33,
+      alternativeSets: {
+        "СИН32.02.108.500-01 (D пл. 100 мм, хром)": {
+          position: 2,
+          name: "Втулка",
+          designation: "СИН32.02.108.503",
+          quantity: 1,
+        },
+        "СИН32.02.108.500-02 (D пл. 125мм, азот)": {
+          position: 2,
+          name: "Втулка",
+          designation: "СИН32.02.108.503-01",
+          quantity: 1,
+        },
+        "СИН32.02.108.500-03 (D пл. 125 мм, хром)": {
+          position: 2,
+          name: "Втулка",
+          designation: "СИН32.02.108.503-01",
+          quantity: 1,
+        },
+      },
     },
     {
       id: 3,
@@ -1263,6 +1605,26 @@ export const plungerSealLinks: Product = {
       quantity: 1,
       positioningTop: 2,
       positioningLeft: 49,
+      alternativeSets: {
+        "СИН32.02.108.500-01 (D пл. 100 мм, хром)": {
+          position: 3,
+          name: "Пакет уплотнений",
+          designation: "СИН32.00.108.510-01",
+          quantity: 1,
+        },
+        "СИН32.02.108.500-02 (D пл. 125мм, азот)": {
+          position: 3,
+          name: "Пакет уплотнений",
+          designation: "СИН32.00.108.510-02",
+          quantity: 1,
+        },
+        "СИН32.02.108.500-03 (D пл. 125 мм, хром)": {
+          position: 3,
+          name: "Пакет уплотнений",
+          designation: "СИН32.00.108.510-03",
+          quantity: 1,
+        },
+      },
     },
     {
       id: 4,
@@ -1275,6 +1637,26 @@ export const plungerSealLinks: Product = {
       quantity: 1,
       positioningTop: 2,
       positioningLeft: 71,
+      alternativeSets: {
+        "СИН32.02.108.500-01 (D пл. 100 мм, хром)": {
+          position: 4,
+          name: "Стакан",
+          designation: "СИН32.02.108.501",
+          quantity: 1,
+        },
+        "СИН32.02.108.500-02 (D пл. 125мм, азот)": {
+          position: 4,
+          name: "Стакан",
+          designation: "СИН32.02.108.501-01",
+          quantity: 1,
+        },
+        "СИН32.02.108.500-03 (D пл. 125 мм, хром)": {
+          position: 4,
+          name: "Стакан",
+          designation: "СИН32.02.108.501-01",
+          quantity: 1,
+        },
+      },
     },
     {
       id: 5,
@@ -1287,6 +1669,26 @@ export const plungerSealLinks: Product = {
       quantity: 1,
       positioningTop: 2,
       positioningLeft: 85,
+      alternativeSets: {
+        "СИН32.02.108.500-01 (D пл. 100 мм, хром)": {
+          position: 5,
+          name: "Манжета",
+          designation: "СИН61.01.110.002-04",
+          quantity: 1,
+        },
+        "СИН32.02.108.500-02 (D пл. 125мм, азот)": {
+          position: 5,
+          name: "Манжета",
+          designation: "СИН61.01.110.002-04",
+          quantity: 1,
+        },
+        "СИН32.02.108.500-03 (D пл. 125 мм, хром)": {
+          position: 5,
+          name: "Манжета",
+          designation: "СИН61.01.110.002-04",
+          quantity: 1,
+        },
+      },
     },
     {
       id: 6,
@@ -1299,6 +1701,26 @@ export const plungerSealLinks: Product = {
       quantity: 1,
       positioningTop: 2,
       positioningLeft: 94,
+      alternativeSets: {
+        "СИН32.02.108.500-01 (D пл. 100 мм, хром)": {
+          position: 6,
+          name: "Кольцо",
+          description: "175-185-46-2-4 ГОСТ 9833-73/ГОСТ 18829-73",
+          quantity: 1,
+        },
+        "СИН32.02.108.500-02 (D пл. 125мм, азот)": {
+          position: 6,
+          name: "Кольцо",
+          description: "175-185-46-2-4 ГОСТ 9833-73/ГОСТ 18829-73",
+          quantity: 1,
+        },
+        "СИН32.02.108.500-03 (D пл. 125 мм, хром)": {
+          position: 6,
+          name: "Кольцо",
+          description: "175-185-46-2-4 ГОСТ 9833-73/ГОСТ 18829-73",
+          quantity: 1,
+        },
+      },
     },
   ],
 };
@@ -1323,6 +1745,32 @@ export const sealPackageLinks: Product = {
       quantity: 1,
       positioningTop: 2,
       positioningLeft: 24,
+      alternativeSets: {
+        "СИН32.00.108.510 (D пл. 100 мм, азот)": {
+          position: 1,
+          name: "Манжета",
+          designation: "СИН32.04.100.04.03.013",
+          quantity: 1,
+        },
+        "СИН32.00.108.510-01 (D пл. 100 мм, хром)": {
+          position: 1,
+          name: "Манжета",
+          designation: "СИН32.04.100.04.03.013",
+          quantity: 1,
+        },
+        "СИН32.00.108.510-02 (D пл. 125 мм, азот)": {
+          position: 1,
+          name: "Манжета",
+          designation: "СИН32.04.100.04.03.013-01",
+          quantity: 1,
+        },
+        "СИН32.00.108.510-03 (D пл. 125 мм, хром)": {
+          position: 1,
+          name: "Манжета",
+          designation: " СИН32.04.100.04.03.013-01",
+          quantity: 1,
+        },
+      },
     },
     {
       id: 2,
@@ -1335,6 +1783,32 @@ export const sealPackageLinks: Product = {
       quantity: 1,
       positioningTop: 2,
       positioningLeft: 42,
+      alternativeSets: {
+        "СИН32.00.108.510 (D пл. 100 мм, азот)": {
+          position: 2,
+          name: "Кольцо",
+          description: "120-125-30-2-4 ГОСТ 9833-73/ГОСТ 18829-73",
+          quantity: 1,
+        },
+        "СИН32.00.108.510-01 (D пл. 100 мм, хром)": {
+          position: 2,
+          name: "Кольцо",
+          description: "120-125-30-2-4 ГОСТ 9833-73/ГОСТ 18829-73",
+          quantity: 1,
+        },
+        "СИН32.00.108.510-02 (D пл. 125 мм, азот)": {
+          position: 2,
+          name: "Кольцо",
+          description: "120-125-30-2-4 ГОСТ 9833-73/ГОСТ 18829-73",
+          quantity: 1,
+        },
+        "СИН32.00.108.510-03 (D пл. 125 мм, хром)": {
+          position: 2,
+          name: "Кольцо",
+          description: "120-125-30-2-4 ГОСТ 9833-73/ГОСТ 18829-73",
+          quantity: 1,
+        },
+      },
     },
     {
       id: 3,
@@ -1347,6 +1821,32 @@ export const sealPackageLinks: Product = {
       quantity: 1,
       positioningTop: 2,
       positioningLeft: 59,
+      alternativeSets: {
+        "СИН32.00.108.510 (D пл. 100 мм, азот)": {
+          position: 3,
+          name: "Кольцо",
+          designation: "СИН61.02.108.414",
+          quantity: 1,
+        },
+        "СИН32.00.108.510-01 (D пл. 100 мм, хром)": {
+          position: 3,
+          name: "Кольцо",
+          designation: "СИН61.00.108.414",
+          quantity: 1,
+        },
+        "СИН32.00.108.510-02 (D пл. 125 мм, азот)": {
+          position: 3,
+          name: "Кольцо",
+          designation: "СИН61.02.108.414-01",
+          quantity: 1,
+        },
+        "СИН32.00.108.510-03 (D пл. 125 мм, хром)": {
+          position: 3,
+          name: "Кольцо",
+          designation: " СИН61.00.108.414-01",
+          quantity: 1,
+        },
+      },
     },
     {
       id: 4,
@@ -1359,6 +1859,32 @@ export const sealPackageLinks: Product = {
       quantity: 1,
       positioningTop: 2,
       positioningLeft: 77,
+      alternativeSets: {
+        "СИН32.00.108.510 (D пл. 100 мм, азот)": {
+          position: 4,
+          name: "Манжета",
+          designation: "СИН32.02.108.511",
+          quantity: 7,
+        },
+        "СИН32.00.108.510-01 (D пл. 100 мм, хром)": {
+          position: 4,
+          name: "Манжета",
+          designation: "СИН32.02.108.511",
+          quantity: 7,
+        },
+        "СИН32.00.108.510-02 (D пл. 125 мм, азот)": {
+          position: 4,
+          name: "Манжета",
+          designation: "СИН32.02.108.512",
+          quantity: 7,
+        },
+        "СИН32.00.108.510-03 (D пл. 125 мм, хром)": {
+          position: 4,
+          name: "Манжета",
+          designation: "СИН32.02.108.512",
+          quantity: 7,
+        },
+      },
     },
     {
       id: 5,
@@ -1371,6 +1897,32 @@ export const sealPackageLinks: Product = {
       quantity: 1,
       positioningTop: 2,
       positioningLeft: 94,
+      alternativeSets: {
+        "СИН32.00.108.510 (D пл. 100 мм, азот)": {
+          position: 5,
+          name: "Кольцо",
+          designation: "СИН61.02.108.415",
+          quantity: 1,
+        },
+        "СИН32.00.108.510-01 (D пл. 100 мм, хром)": {
+          position: 5,
+          name: "Кольцо",
+          designation: "СИН61.00.108.415",
+          quantity: 1,
+        },
+        "СИН32.00.108.510-02 (D пл. 125 мм, азот)": {
+          position: 5,
+          name: "Кольцо",
+          designation: "СИН61.02.108.415-01",
+          quantity: 1,
+        },
+        "СИН32.00.108.510-03 (D пл. 125 мм, хром)": {
+          position: 5,
+          name: "Кольцо",
+          designation: "СИН61.00.108.415-01",
+          quantity: 1,
+        },
+      },
     },
   ],
 };
@@ -2277,7 +2829,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
   id: 15,
   src: "/png/planetaryCylindricalGearbox.png",
   path: "/planetaryCylindricalGearbox",
-  width: 100,
+  width: 120,
   name: "Редуктор планетарно-цилиндрический СИН32",
   drawing: 15,
   head: 2,
@@ -2291,8 +2843,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Передача планетарная",
       designation: "СИН32.00.200.100",
       quantity: 1,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 1,
+      positioningLeft: 48,
     },
     {
       id: 2,
@@ -2302,8 +2854,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       position: 2,
       name: "Водило",
       quantity: 1,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 1,
+      positioningLeft: 36,
     },
     {
       id: 3,
@@ -2313,8 +2865,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       position: 3,
       name: "Палец",
       quantity: 1,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 1,
+      positioningLeft: 57,
     },
     {
       id: 4,
@@ -2325,7 +2877,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Сателлит",
       designation: "СИН32.04.04.03.00.007",
       quantity: 1,
-      positioningTop: 92,
+      positioningTop: 1,
       positioningLeft: 42,
     },
     {
@@ -2337,8 +2889,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Проставка",
       designation: "СИН32.00.200.001",
       quantity: 1,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 1,
+      positioningLeft: 9,
     },
     {
       id: 6,
@@ -2349,8 +2901,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Крышка",
       designation: "СИН32.00.200.002",
       quantity: 1,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 2,
+      positioningLeft: 88,
     },
     {
       id: 7,
@@ -2361,8 +2913,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Вал-шестерня",
       designation: "СИН32.00.200.003",
       quantity: 1,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 90,
+      positioningLeft: 37,
     },
     {
       id: 8,
@@ -2373,8 +2925,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Шестерня солнечная",
       designation: "СИН32.00.200.005",
       quantity: 1,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 43,
+      positioningLeft: 9,
     },
     {
       id: 9,
@@ -2385,8 +2937,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Заглушка",
       designation: "СИН32.00.200.007",
       quantity: 2,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 53,
+      positioningLeft: 91,
     },
     {
       id: 10,
@@ -2397,8 +2949,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Заглушка",
       designation: "СИН32.00.200.008",
       quantity: 4,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 48,
+      positioningLeft: 92,
     },
     {
       id: 11,
@@ -2409,8 +2961,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Корпус",
       designation: "СИН32.00.200.009",
       quantity: 1,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 64,
+      positioningLeft: 9,
     },
     {
       id: 12,
@@ -2421,8 +2973,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Кольцо",
       designation: "СИН32.00.200.016",
       quantity: 1,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 64,
+      positioningLeft: 92,
     },
     {
       id: 13,
@@ -2433,8 +2985,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Кольцо",
       designation: "СИН32.00.200.017",
       quantity: 2,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 35,
+      positioningLeft: 90,
     },
     {
       id: 14,
@@ -2445,8 +2997,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Шестерня паразитная",
       designation: "СИН32.00.200.022",
       quantity: 1,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 44,
+      positioningLeft: 91,
     },
     {
       id: 15,
@@ -2457,8 +3009,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Колесо зубчатое",
       designation: "СИН32.00.200.023",
       quantity: 1,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 40,
+      positioningLeft: 90,
     },
     {
       id: 16,
@@ -2469,8 +3021,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Вал промежуточный",
       designation: "СИН32.00.200.032",
       quantity: 1,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 59,
+      positioningLeft: 92,
     },
     {
       id: 17,
@@ -2481,8 +3033,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Вал выходной",
       designation: "СИН32.00.200.033",
       quantity: 1,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 30,
+      positioningLeft: 90,
     },
     {
       id: 18,
@@ -2493,8 +3045,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Колесо корончатое",
       designation: "СИН32.04.200.00.00.001А",
       quantity: 1,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 53,
+      positioningLeft: 9,
     },
     {
       id: 19,
@@ -2505,8 +3057,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Манжета",
       description: "2.1-65•90-1 ГОСТ 8752-79",
       quantity: 1,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 90,
+      positioningLeft: 45,
     },
     {
       id: 20,
@@ -2517,8 +3069,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Манжета",
       description: "1.1-130•160-1 ГОСТ 8752-79",
       quantity: 1,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 38,
+      positioningLeft: 9,
     },
     {
       id: 21,
@@ -2529,8 +3081,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Подшипник",
       description: "1000940 ГОСТ 8338-75",
       quantity: 1,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 1,
+      positioningLeft: 67,
     },
     {
       id: 22,
@@ -2541,8 +3093,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Подшипник",
       description: "7318А ГОСТ 27365-87",
       quantity: 1,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 1,
+      positioningLeft: 77,
     },
     {
       id: 23,
@@ -2553,8 +3105,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Подшипник",
       description: "7315А ГОСТ 27365-87",
       quantity: 1,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 24,
+      positioningLeft: 90,
     },
     {
       id: 24,
@@ -2565,8 +3117,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Подшипник",
       description: "7313А ГОСТ 27365-87",
       quantity: 4,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 90,
+      positioningLeft: 85,
     },
     {
       id: 25,
@@ -2577,8 +3129,20 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Подшипник",
       description: "53609 ГОСТ 24696-81",
       quantity: 8,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 48,
+      positioningLeft: 9,
+    },
+    {
+      id: 26,
+      parentProductId: 15,
+      productDrawing: 15,
+      productName: "Редуктор планетарно-цилиндрический СИН32",
+      position: 26,
+      name: "Насос",
+      description: "НШ32У-3",
+      quantity: 1,
+      positioningTop: 90,
+      positioningLeft: 100,
     },
     {
       id: 27,
@@ -2589,8 +3153,8 @@ export const planetaryCylindricalGearboxLinks: Product = {
       name: "Шпонка",
       description: "25*14*75 ГОСТ 23360-78",
       quantity: 1,
-      positioningTop: 92,
-      positioningLeft: 42,
+      positioningTop: 90,
+      positioningLeft: 27,
     },
   ],
 };

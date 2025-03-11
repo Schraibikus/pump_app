@@ -112,7 +112,6 @@ export const SchemeBuilder = ({
     if (selectedItem) {
       const newPart = {
         ...selectedItem,
-        quantity,
         parentProductId: productId,
         productName,
         productDrawing,
@@ -120,6 +119,7 @@ export const SchemeBuilder = ({
         ...(selectedItem.selectedSet && selectedItem.alternativeSets
           ? selectedItem.alternativeSets[selectedItem.selectedSet]
           : {}),
+        quantity,
         comment: includeComment ? comment : undefined,
         partId: selectedItem.id,
       };
