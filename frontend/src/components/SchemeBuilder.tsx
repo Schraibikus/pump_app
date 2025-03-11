@@ -99,7 +99,7 @@ export const SchemeBuilder = ({
   };
 
   useEffect(() => {
-    // Сбрасываем количество при изменении выбранной части
+    // Сбрасываем количество, коментарий при изменении выбранной части
     setQuantity(1);
     setIncludeComment(false);
     setComment("");
@@ -205,15 +205,16 @@ export const SchemeBuilder = ({
           На страницу изделия
         </Button>
 
+        <Button
+          variant="contained"
+          onClick={() => setOrderOpen(true)}
+          sx={{ m: 2, alignSelf: "flex-start" }}
+          disabled={!hasOrder}
+        >
+          Просмотреть заказ
+        </Button>
         {hasOrder && (
           <>
-            <Button
-              variant="contained"
-              onClick={() => setOrderOpen(true)}
-              sx={{ m: 2, alignSelf: "flex-start" }}
-            >
-              Просмотреть заказ
-            </Button>
             <Typography sx={{ ml: 2 }}>
               {`Наименований - (${totalItemsInOrder})`}
             </Typography>
@@ -442,7 +443,6 @@ export const SchemeBuilder = ({
                         fullWidth
                         label="Ваш комментарий"
                         value={comment}
-                        // placeholder={TEXTAREA_PLACEHOLDER}
                         onChange={(event) => setComment(event.target.value)}
                         slotProps={{
                           input: {
