@@ -206,12 +206,11 @@ function startServer() {
 
   // 🔹 Изменение заказа
   app.patch("/api/orders", async (req: Request, res: Response) => {
-    const { orderId, changes } = req.body; // Используем CamelCase
+    const { orderId, changes } = req.body;
 
     try {
       // Добавление новых товаров
       if (changes.addItems) {
-        // Используем CamelCase
         for (const item of changes.addItems) {
           await pool.query(
             `
@@ -221,11 +220,11 @@ function startServer() {
           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
           `,
             [
-              orderId, // Используем CamelCase
-              item.partId, // Используем CamelCase
-              item.parentProductId, // Используем CamelCase
-              item.productName, // Используем CamelCase
-              item.productDrawing, // Используем CamelCase
+              orderId,
+              item.partId,
+              item.parentProductId,
+              item.productName,
+              item.productDrawing,
               item.position,
               item.name,
               item.description,
@@ -240,7 +239,6 @@ function startServer() {
 
       // Удаление товаров
       if (changes.removeItems) {
-        // Используем CamelCase
         for (const item of changes.removeItems) {
           await pool.query("DELETE FROM order_parts WHERE id = $1", [item.id]);
         }
@@ -248,7 +246,6 @@ function startServer() {
 
       // Обновление количества товаров
       if (changes.updateItems) {
-        // Используем CamelCase
         for (const item of changes.updateItems) {
           await pool.query(
             "UPDATE order_parts SET quantity = $1 WHERE id = $2",
@@ -259,7 +256,6 @@ function startServer() {
 
       // Обновление комментариев
       if (changes.updateComments) {
-        // Используем CamelCase
         for (const item of changes.updateComments) {
           await pool.query(
             "UPDATE order_parts SET comment = $1 WHERE id = $2",
@@ -270,7 +266,6 @@ function startServer() {
 
       // Удаление комментариев
       if (changes.removeComments) {
-        // Используем CamelCase
         for (const item of changes.removeComments) {
           await pool.query(
             "UPDATE order_parts SET comment = NULL WHERE id = $1",
@@ -288,7 +283,7 @@ function startServer() {
       LEFT JOIN order_parts op ON o.id = op.order_id
       WHERE o.id = $1
       `,
-        [orderId] // Используем CamelCase
+        [orderId]
       );
 
       const updatedOrder = orders.reduce((acc, row) => {
@@ -302,10 +297,10 @@ function startServer() {
         if (row.part_id) {
           acc.parts.push({
             id: row.part_id,
-            partId: row.part_part_id, // Используем CamelCase
-            parentProductId: row.parent_product_id, // Используем CamelCase
-            productName: row.product_name, // Используем CamelCase
-            productDrawing: row.product_drawing, // Используем CamelCase
+            partId: row.part_part_id,
+            parentProductId: row.parent_product_id,
+            productName: row.product_name,
+            productDrawing: row.product_drawing,
             position: row.position,
             name: row.name,
             description: row.description,

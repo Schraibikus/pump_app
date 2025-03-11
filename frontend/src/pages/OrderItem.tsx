@@ -12,15 +12,23 @@ import {
   Modal,
   TextField,
   IconButton,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+  SelectChangeEvent,
 } from "@mui/material";
 import { Fragment, useState, useEffect } from "react";
 import { ExportDropdown } from "@/components/ExportDropdown";
-import { Order, PartItem } from "@/types";
+import { Order, PartItem, PatchOrderPayload } from "@/types";
 import EditIcon from "@mui/icons-material/Edit";
 import SaveIcon from "@mui/icons-material/Save";
 import CancelIcon from "@mui/icons-material/Cancel";
+import DeleteIcon from "@mui/icons-material/Delete";
 import { patchOrder } from "@/store/modules/orders/thunk";
 import { useAppDispatch, useAppSelector } from "@/hooks/useReduxHooks";
+import { useNavigate } from "react-router-dom";
+import { products } from "@/constants";
 
 export const OrderItem = ({
   orderId,
@@ -30,7 +38,7 @@ export const OrderItem = ({
   handleDeleteOrder: (orderId: number) => void;
 }) => {
   const dispatch = useAppDispatch();
-
+  const navigate = useNavigate();
   const defaultOrder: Order = {
     id: 0,
     createdAt: "",
@@ -46,14 +54,47 @@ export const OrderItem = ({
   const [isEditing, setIsEditing] = useState(false);
   const [editedParts, setEditedParts] = useState<PartItem[]>(order.parts || []);
 
+  // Состояния для выбора productHead и productPath
+  const [selectedProductHead, setSelectedProductHead] = useState<number | "">(
+    ""
+  );
+  const [selectedProductPath, setSelectedProductPath] = useState<string>("");
+
+  // Обработчик выбора productHead
+  const handleProductHeadChange = (event: SelectChangeEvent<number>) => {
+    setSelectedProductHead(event.target.value as number);
+    setSelectedProductPath(""); // Сбрасываем выбор productPath при изменении productHead
+  };
+
+  // Обработчик выбора productPath
+  const handleProductPathChange = (event: SelectChangeEvent<string>) => {
+    setSelectedProductPath(event.target.value as string);
+  };
+
+  // Обработчик нажатия на кнопку "Добавить деталь"
+  const handleAddPartClick = () => {
+    if (selectedProductHead && selectedProductPath) {
+      navigate(
+        `/${selectedProductHead}/${selectedProductPath}?orderId=${orderId}`
+      );
+    } else {
+      alert("Пожалуйста, выберите группу изделий и изделие.");
+    }
+  };
+
   useEffect(() => {
     if (order) {
-      setEditedParts((order ?? {}).parts || []);
+      setEditedParts(order.parts || []);
     }
   }, [order]);
 
   const handleOpenModal = () => setOpenModal(true);
-  const handleCloseModal = () => setOpenModal(false);
+  const handleCloseModal = () => {
+    setSelectedProductHead("");
+    setSelectedProductPath("");
+    setIsEditing(false);
+    setOpenModal(false);
+  };
 
   const handleEditClick = () => {
     setIsEditing(true);
@@ -61,23 +102,55 @@ export const OrderItem = ({
 
   const handleSaveClick = async () => {
     try {
-      await dispatch(
-        patchOrder({
-          orderId: order.id,
-          changes: {
-            updateItems: editedParts.map((part) => ({
+      const payload: PatchOrderPayload = {
+        orderId: order.id,
+        changes: {
+          addItems: editedParts
+            .filter((part) => !part.id) // Новые части без ID
+            .map((part) => ({
+              partId: part.id,
+              parentProductId: part.parentProductId,
+              productName: part.productName,
+              productDrawing: part.productDrawing || null,
+              position: part.position,
+              name: part.name,
+              description: part.description || "",
+              designation: part.designation || "",
+              quantity: part.quantity,
+              drawing: part.drawing || null,
+              comment: part.comment || "",
+            })),
+          removeItems: order.parts
+            .filter(
+              (originalPart) =>
+                !editedParts.some(
+                  (editedPart) => editedPart.id === originalPart.id
+                )
+            )
+            .map((part) => ({ id: part.id })), // Удалённые части
+          updateItems: editedParts
+            .filter((part) => part.id) // Существующие части с ID
+            .map((part) => ({
               id: part.id,
               quantity: part.quantity,
             })),
-            updateComments: editedParts
-              .filter((part) => part.comment)
-              .map((part) => ({
-                id: part.id,
-                comment: part.comment || "",
-              })),
-          },
-        })
-      ).unwrap();
+          updateComments: editedParts
+            .filter((part) => part.comment)
+            .map((part) => ({
+              id: part.id,
+              comment: part.comment || "",
+            })),
+          removeComments: editedParts
+            .filter(
+              (part) =>
+                !part.comment &&
+                order.parts.some((p) => p.id === part.id && p.comment)
+            )
+            .map((part) => ({ id: part.id })),
+        },
+      };
+
+      await dispatch(patchOrder(payload)).unwrap();
       setIsEditing(false);
     } catch (error) {
       console.error("Ошибка при обновлении заказа:", error);
@@ -86,6 +159,8 @@ export const OrderItem = ({
 
   const handleCancelClick = () => {
     setEditedParts(order.parts || []);
+    setSelectedProductHead("");
+    setSelectedProductPath("");
     setIsEditing(false);
   };
 
@@ -104,6 +179,10 @@ export const OrderItem = ({
           : part
       )
     );
+  };
+
+  const handleDeletePart = (id: number) => {
+    setEditedParts((prev) => prev.filter((part) => part.id !== id));
   };
 
   return (
@@ -175,6 +254,59 @@ export const OrderItem = ({
               </Button>
             </Box>
           </Box>
+          {isEditing && (
+            <Box sx={{ display: "flex", gap: 2, my: 2 }}>
+              <FormControl sx={{ minWidth: 120 }}>
+                <InputLabel id="product-head-label">Группа изделий</InputLabel>
+                <Select
+                  labelId="product-head-label"
+                  value={selectedProductHead}
+                  onChange={handleProductHeadChange}
+                  label="Группа изделий"
+                >
+                  <MenuItem value="">
+                    <em>Выберите группу</em>
+                  </MenuItem>
+                  {[...new Set(products.map((product) => product.head))].map(
+                    (head) => (
+                      <MenuItem key={head} value={head}>
+                        {head}
+                      </MenuItem>
+                    )
+                  )}
+                </Select>
+              </FormControl>
+              <FormControl sx={{ minWidth: 120 }}>
+                <InputLabel id="product-path-label">Изделие</InputLabel>
+                <Select
+                  labelId="product-path-label"
+                  value={selectedProductPath}
+                  onChange={handleProductPathChange}
+                  label="Изделие"
+                  disabled={!selectedProductHead} // Блокируем, пока не выбран productHead
+                >
+                  <MenuItem value="">
+                    <em>Выберите изделие</em>
+                  </MenuItem>
+                  {products
+                    .filter((product) => product.head === selectedProductHead)
+                    .map((product) => (
+                      <MenuItem key={product.path} value={product.path}>
+                        {product.name}
+                      </MenuItem>
+                    ))}
+                </Select>
+              </FormControl>
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={handleAddPartClick}
+                disabled={!selectedProductHead || !selectedProductPath}
+              >
+                Добавить деталь
+              </Button>
+            </Box>
+          )}
           {editedParts.length > 0 ? (
             <TableContainer component={Paper}>
               <Table sx={{ minWidth: 800 }}>
@@ -190,6 +322,11 @@ export const OrderItem = ({
                     <TableCell sx={{ fontWeight: "bold" }}>
                       Комментарий
                     </TableCell>
+                    {isEditing && (
+                      <TableCell sx={{ fontWeight: "bold" }}>
+                        Действия
+                      </TableCell>
+                    )}
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -205,7 +342,10 @@ export const OrderItem = ({
                   ).map(([productName, parts]) => (
                     <Fragment key={productName}>
                       <TableRow sx={{ backgroundColor: "#e0e0e0" }}>
-                        <TableCell colSpan={4} sx={{ fontWeight: "bold" }}>
+                        <TableCell
+                          colSpan={isEditing ? 5 : 4}
+                          sx={{ fontWeight: "bold" }}
+                        >
                           {productName}:
                         </TableCell>
                       </TableRow>
@@ -222,14 +362,14 @@ export const OrderItem = ({
                               <TextField
                                 type="number"
                                 value={part.quantity}
+                                sx={{ width: 80 }}
+                                size="small"
                                 onChange={(e) =>
                                   handleQuantityChange(
                                     part.id,
                                     parseInt(e.target.value)
                                   )
                                 }
-                                size="small"
-                                sx={{ width: 80 }}
                               />
                             ) : (
                               part.quantity
@@ -246,9 +386,19 @@ export const OrderItem = ({
                                 fullWidth
                               />
                             ) : (
-                              part.comment || "—"
+                              part.comment || ""
                             )}
                           </TableCell>
+                          {isEditing && (
+                            <TableCell>
+                              <IconButton
+                                color="error"
+                                onClick={() => handleDeletePart(part.id)}
+                              >
+                                <DeleteIcon />
+                              </IconButton>
+                            </TableCell>
+                          )}
                         </TableRow>
                       ))}
                     </Fragment>

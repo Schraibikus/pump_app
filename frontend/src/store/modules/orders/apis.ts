@@ -51,6 +51,7 @@ export const createOrdersApi = async (order: Order) => {
 
 export const patchOrderApi = async (payload: PatchOrderPayload) => {
   try {
+    // console.log("Отправляемые данные:", payload);
     const { data } = await api.patch<Order>("/api/orders", payload);
     return data;
   } catch (error) {

@@ -29,7 +29,7 @@ import {
   clearOrder,
   removePartFromOrder,
 } from "@/store/modules/orders/ordersSlice";
-import { createOrder } from "@/store/modules/orders/thunk";
+import { createOrder, patchOrder } from "@/store/modules/orders/thunk";
 
 export const SchemeBuilder = ({
   schemaSrc,
@@ -60,6 +60,9 @@ export const SchemeBuilder = ({
 
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
+
+  // Получаем orderId из query-параметров
+  const orderId = new URLSearchParams(location.search).get("orderId");
 
   const { parts, loading, error, cachedParts } = useAppSelector(
     (state) => state.productParts
@@ -118,11 +121,34 @@ export const SchemeBuilder = ({
           ? selectedItem.alternativeSets[selectedItem.selectedSet]
           : {}),
         comment: includeComment ? comment : undefined,
+        partId: selectedItem.id,
       };
 
-      setQuantity(1);
-      dispatch(addPartToOrder(newPart));
-      setOpen(false);
+      try {
+        if (orderId) {
+          // Если orderId есть, это редактирование существующего заказа
+          dispatch(
+            patchOrder({
+              orderId: Number(orderId),
+              changes: {
+                addItems: [newPart],
+              },
+            })
+          ).unwrap();
+
+          // Возвращаем пользователя обратно к заказу
+          navigate(`/orders`);
+        } else {
+          // Если orderId нет, это создание нового заказа
+          dispatch(addPartToOrder(newPart));
+        }
+
+        // Сбрасываем состояние
+        setQuantity(1);
+        setOpen(false);
+      } catch (error) {
+        console.error("Ошибка при добавлении детали в заказ:", error);
+      }
     }
   };
 
