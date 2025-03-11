@@ -204,6 +204,129 @@ function startServer() {
     }
   });
 
+  // 🔹 Изменение заказа
+  app.patch("/api/orders", async (req: Request, res: Response) => {
+    const { orderId, changes } = req.body; // Используем CamelCase
+
+    try {
+      // Добавление новых товаров
+      if (changes.addItems) {
+        // Используем CamelCase
+        for (const item of changes.addItems) {
+          await pool.query(
+            `
+          INSERT INTO order_parts 
+            (order_id, part_id, parent_product_id, product_name, product_drawing, 
+             position, name, description, designation, quantity, drawing, comment) 
+          VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
+          `,
+            [
+              orderId, // Используем CamelCase
+              item.partId, // Используем CamelCase
+              item.parentProductId, // Используем CamelCase
+              item.productName, // Используем CamelCase
+              item.productDrawing, // Используем CamelCase
+              item.position,
+              item.name,
+              item.description,
+              item.designation,
+              item.quantity,
+              item.drawing,
+              item.comment || null,
+            ]
+          );
+        }
+      }
+
+      // Удаление товаров
+      if (changes.removeItems) {
+        // Используем CamelCase
+        for (const item of changes.removeItems) {
+          await pool.query("DELETE FROM order_parts WHERE id = $1", [item.id]);
+        }
+      }
+
+      // Обновление количества товаров
+      if (changes.updateItems) {
+        // Используем CamelCase
+        for (const item of changes.updateItems) {
+          await pool.query(
+            "UPDATE order_parts SET quantity = $1 WHERE id = $2",
+            [item.quantity, item.id]
+          );
+        }
+      }
+
+      // Обновление комментариев
+      if (changes.updateComments) {
+        // Используем CamelCase
+        for (const item of changes.updateComments) {
+          await pool.query(
+            "UPDATE order_parts SET comment = $1 WHERE id = $2",
+            [item.comment, item.id]
+          );
+        }
+      }
+
+      // Удаление комментариев
+      if (changes.removeComments) {
+        // Используем CamelCase
+        for (const item of changes.removeComments) {
+          await pool.query(
+            "UPDATE order_parts SET comment = NULL WHERE id = $1",
+            [item.id]
+          );
+        }
+      }
+
+      const { rows: orders } = await pool.query(
+        `
+      SELECT o.*, op.id AS part_id, op.part_id AS part_part_id, op.parent_product_id, 
+             op.product_name, op.product_drawing, op.position, op.name, op.description, 
+             op.designation, op.quantity, op.drawing, op.comment
+      FROM orders o
+      LEFT JOIN order_parts op ON o.id = op.order_id
+      WHERE o.id = $1
+      `,
+        [orderId] // Используем CamelCase
+      );
+
+      const updatedOrder = orders.reduce((acc, row) => {
+        if (!acc.id) {
+          acc = {
+            id: row.id,
+            createdAt: row.created_at,
+            parts: [],
+          };
+        }
+        if (row.part_id) {
+          acc.parts.push({
+            id: row.part_id,
+            partId: row.part_part_id, // Используем CamelCase
+            parentProductId: row.parent_product_id, // Используем CamelCase
+            productName: row.product_name, // Используем CamelCase
+            productDrawing: row.product_drawing, // Используем CamelCase
+            position: row.position,
+            name: row.name,
+            description: row.description,
+            designation: row.designation,
+            quantity: row.quantity,
+            drawing: row.drawing,
+            comment: row.comment,
+          });
+        }
+        return acc;
+      }, {} as Order);
+
+      const camelCaseUpdatedOrder = convertToCamelCase(updatedOrder);
+
+      res.status(200).json(camelCaseUpdatedOrder);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: "Internal server error" });
+    }
+  });
+
   // 🔹 Удаление заказа
   app.delete(
     "/api/orders/:id",

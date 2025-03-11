@@ -1,6 +1,6 @@
 import axios from "axios";
 import { api } from "@/store/axios";
-import { Order } from "@/types";
+import { Order, PatchOrderPayload } from "@/types";
 
 export const fetchOrdersApi = async (): Promise<Order[]> => {
   try {
@@ -45,6 +45,24 @@ export const createOrdersApi = async (order: Order) => {
     } else {
       console.error("Неизвестная ошибка при создании заказа:", error);
       throw new Error("Неизвестная ошибка");
+    }
+  }
+};
+
+export const patchOrderApi = async (payload: PatchOrderPayload) => {
+  try {
+    const { data } = await api.patch<Order>("/api/orders", payload);
+    return data;
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      console.error("Ошибка при изменении заказа:", error.response?.data);
+      throw {
+        message: error.response?.data?.message || "Ошибка запроса",
+        status: error.response?.status,
+      };
+    } else {
+      console.error("Неизвестная ошибка при изменении заказа:", error);
+      throw { message: "Неизвестная ошибка" };
     }
   }
 };

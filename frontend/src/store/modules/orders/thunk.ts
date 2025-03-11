@@ -1,11 +1,12 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios, { AxiosError } from "axios";
-import { Order } from "@/types";
+import { Order, PatchOrderPayload } from "@/types";
 import {
   createOrdersApi,
   deleteOrdersApi,
   fetchOrdersApi,
   fetchSingleOrderApi,
+  patchOrderApi,
 } from "@/store/modules/orders/apis";
 
 // Асинхронный чанк для получения списка продуктов
@@ -44,6 +45,21 @@ export const createOrder = createAsyncThunk(
   async (order: Order, { rejectWithValue }) => {
     try {
       const data = await createOrdersApi(order);
+      return data;
+    } catch (error) {
+      if (error instanceof AxiosError) {
+        return rejectWithValue(error.response?.data?.message);
+      }
+      return rejectWithValue("Неизвестная ошибка.");
+    }
+  }
+);
+
+export const patchOrder = createAsyncThunk(
+  "orders/patchOrder",
+  async (payload: PatchOrderPayload, { rejectWithValue }) => {
+    try {
+      const data = await patchOrderApi(payload);
       return data;
     } catch (error) {
       if (error instanceof AxiosError) {

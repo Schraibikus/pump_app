@@ -96,7 +96,7 @@ export const OrdersPage = () => {
           currentOrders.map((order) => (
             <OrderItem
               key={order.id || order.createdAt}
-              order={order}
+              orderId={order.id}
               handleDeleteOrder={handleDeleteOrder}
             />
           ))

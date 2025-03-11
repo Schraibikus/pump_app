@@ -5,6 +5,7 @@ import {
   deleteOrder,
   fetchOrders,
   fetchSingleOrder,
+  patchOrder,
 } from "@/store/modules/orders/thunk";
 
 interface OrdersState {
@@ -102,6 +103,38 @@ const ordersSlice = createSlice({
         state.error =
           (action.payload as string) || "Ошибка загрузки данных заказа";
       });
+
+    //изменение заказа
+    builder
+      .addCase(patchOrder.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(patchOrder.fulfilled, (state, action) => {
+        state.loading = false;
+
+        const updatedOrder = action.payload;
+
+        // Обновляем singleOrder
+        if (state.singleOrder?.id === updatedOrder.id) {
+          state.singleOrder = updatedOrder;
+        }
+
+        // Обновляем список заказов
+        state.orders = state.orders.map((order) =>
+          order.id === updatedOrder.id ? updatedOrder : order
+        );
+        // if (state.singleOrder) {
+        //   if (state.singleOrder && state.singleOrder.id === action.payload.id) {
+        //     state.singleOrder = action.payload; // Обновляем singleOrder
+        //   }
+        // }
+      })
+      .addCase(patchOrder.rejected, (state, action) => {
+        state.loading = false;
+        state.error = (action.payload as string) || "Ошибка изменения заказа";
+      });
+
     // Удаление заказа
     builder
       .addCase(deleteOrder.pending, (state) => {

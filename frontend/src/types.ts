@@ -50,3 +50,26 @@ export interface Order {
   createdAt: string;
   parts: PartItem[];
 }
+
+export interface PatchOrderPayload {
+  orderId: number;
+  changes: {
+    addItems?: Array<{
+      partId: number;
+      parentProductId: number;
+      productName: string;
+      productDrawing?: number | null;
+      position: number;
+      name: string;
+      description?: string;
+      designation?: string;
+      quantity: number;
+      drawing?: number | null;
+      comment?: string;
+    }>;
+    removeItems?: Array<{ id: number }>;
+    updateItems?: Array<{ id: number; quantity: number }>;
+    updateComments?: Array<{ id: number; comment: string }>;
+    removeComments?: Array<{ id: number }>;
+  };
+}
