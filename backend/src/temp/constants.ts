@@ -2,7 +2,7 @@ import { Product } from "./types.js";
 
 export const threePlungerPumpLinks: Product = {
   id: 1,
-  src: "/png/threePlungerPump.png",
+  src: "/png/sin32_02/threePlungerPump.png",
   path: "/three-plunger-pump",
   width: 70,
   name: "Насос трехплунжерный СИН32.02.100.000",
@@ -739,7 +739,7 @@ export const threePlungerPumpLinks: Product = {
 
 export const connectingRodLinks: Product = {
   id: 2,
-  src: "/png/connectingRod.png",
+  src: "/png/sin32_02/connectingRod.png",
   path: "/connecting-rod",
   width: 100,
   name: "Шатун СИН32.02.102.000",
@@ -884,7 +884,7 @@ export const connectingRodLinks: Product = {
 
 export const tractionUnitLinks: Product = {
   id: 3,
-  src: "/png/tractionUnit.png",
+  src: "/png/sin32_02/tractionUnit.png",
   path: "/traction-unit",
   width: 100,
   name: "Узел тяги",
@@ -1295,7 +1295,7 @@ export const waterworksLinks: Product = {
 
 export const collectorLinks: Product = {
   id: 5,
-  src: "/png/collector.png",
+  src: "/png/sin32_02/collector.png",
   path: "/collector",
   width: 100,
   name: "Коллектор СИН32.02.108.100",
@@ -1416,7 +1416,7 @@ export const collectorLinks: Product = {
 
 export const valveLinks: Product = {
   id: 6,
-  src: "/png/valve.png",
+  src: "/png/sin32_02/valve.png",
   path: "/valve",
   width: 100,
   name: "Клапан СИН32.00.108.600",
@@ -1440,7 +1440,7 @@ export const valveLinks: Product = {
 
 export const valveTwoLinks: Product = {
   id: 7,
-  src: "/png/valve-02.png",
+  src: "/png/sin32_02/valve-02.png",
   path: "/valveTwo",
   width: 100,
   name: "Клапан СИН63.00.108.600",
@@ -1476,7 +1476,7 @@ export const valveTwoLinks: Product = {
 
 export const plungerSealLinks: Product = {
   id: 8,
-  src: "/png/plungerSeal.png",
+  src: "/png/sin32_02/plungerSeal.png",
   path: "/plungerSeal",
   width: 100,
   name: "Уплотнение плунжера СИН32.02.108.500",
@@ -1680,7 +1680,7 @@ export const plungerSealLinks: Product = {
 
 export const sealPackageLinks: Product = {
   id: 9,
-  src: "/png/sealPackage.png",
+  src: "/png/sin32_02/sealPackage.png",
   path: "/sealPackage",
   width: 100,
   name: "Пакет уплотнений СИН32.00.108.510",
@@ -1882,7 +1882,7 @@ export const sealPackageLinks: Product = {
 
 export const housingSealLinks: Product = {
   id: 10,
-  src: "/png/housingSeal.png",
+  src: "/png/sin32_02/housingSeal.png",
   path: "/housingSeal",
   width: 80,
   name: "Уплотнение корпуса",
@@ -1978,7 +1978,7 @@ export const housingSealLinks: Product = {
 
 export const installingTheSensorIndicatorLinks: Product = {
   id: 11,
-  src: "/png/installingTheSensorIndicator.png",
+  src: "/png/sin32_02/installingTheSensorIndicator.png",
   path: "/installingTheSensorIndicator",
   width: 90,
   name: "Установка индикатора датчика (до №3651)",
@@ -2086,7 +2086,7 @@ export const installingTheSensorIndicatorLinks: Product = {
 
 export const installingTheSensorIndicatorTwoLinks: Product = {
   id: 12,
-  src: "/png/installingTheSensorIndicatorTwo.png",
+  src: "/png/sin32_02/installingTheSensorIndicatorTwo.png",
   path: "/installingTheSensorIndicatorTwo",
   width: 80,
   name: "Установка индикатора датчика (с №3651)",
@@ -2218,7 +2218,7 @@ export const installingTheSensorIndicatorTwoLinks: Product = {
 
 export const plungerLubricationSystemLinks: Product = {
   id: 13,
-  src: "/png/plungerLubricationSystem.png",
+  src: "/png/sin32_02/plungerLubricationSystem.png",
   path: "/plungerLubricationSystem",
   width: 120,
   name: "Система смазки плунжеров СИН32.02.104.000",
@@ -2576,7 +2576,7 @@ export const plungerLubricationSystemLinks: Product = {
 
 export const pumpLubricationSystemLinks: Product = {
   id: 14,
-  src: "/png/pumpLubricationSystem.png",
+  src: "/png/sin32_02/pumpLubricationSystem.png",
   path: "/pumpLubricationSystem",
   width: 110,
   name: "Система смазки насоса СИН32.02.107.000",
@@ -2780,7 +2780,7 @@ export const pumpLubricationSystemLinks: Product = {
 
 export const planetaryCylindricalGearboxLinks: Product = {
   id: 15,
-  src: "/png/planetaryCylindricalGearbox.png",
+  src: "/png/sin32_00/planetaryCylindricalGearbox.png",
   path: "/planetaryCylindricalGearbox",
   width: 120,
   name: "Редуктор планетарно-цилиндрический СИН32",
