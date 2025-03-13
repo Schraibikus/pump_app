@@ -16,7 +16,15 @@ import {
   installingTheSensorIndicatorTwoLinks,
   plungerLubricationSystemLinks,
   pumpLubricationSystemLinks,
-  planetaryCylindricalGearboxLinks,
+  reducerLinks,
+  planetaryTransmissionLinks,
+  threePlungerPumpTwoLinks,
+  rootShaftLinks,
+  crossheadKnotLinks,
+  housingSealTwoLinks,
+  plungerSealTwoLinks,
+  sealPackageTwoLinks,
+  // planetaryCylindricalGearboxLinks,
 } from "./constants.js";
 
 dotenv.config();
@@ -154,7 +162,16 @@ async function setupDatabase() {
       installingTheSensorIndicatorTwoLinks,
       plungerLubricationSystemLinks,
       pumpLubricationSystemLinks,
-      planetaryCylindricalGearboxLinks,
+      reducerLinks,
+      planetaryTransmissionLinks,
+      threePlungerPumpTwoLinks,
+      rootShaftLinks,
+      crossheadKnotLinks,
+      housingSealTwoLinks,
+
+      plungerSealTwoLinks,
+      sealPackageTwoLinks,
+      // planetaryCylindricalGearboxLinks,
     ];
 
     // Вставка данных в products, parts, part_alternative_sets

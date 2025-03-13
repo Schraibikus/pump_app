@@ -38,9 +38,19 @@ export const products = [
     name: "Система смазки насоса СИН32.02",
   },
   {
+    head: 1,
+    path: "reducer",
+    name: "Редуктор СИН32.02",
+  },
+  {
+    head: 1,
+    path: "planetaryTransmission",
+    name: "Передача планетарная СИН32.02.600.000",
+  },
+  {
     head: 2,
     path: "planetaryCylindricalGearbox",
-    name: "Редуктор планетарно-цилиндрический СИН32",
+    name: "Редуктор планетарно-цилиндрический СИН32.00",
   },
 ];
 

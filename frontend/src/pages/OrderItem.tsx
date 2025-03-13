@@ -228,7 +228,10 @@ export const OrderItem = ({
               mt: 2,
             }}
           >
-            <Typography>Заказ № {order.id}</Typography>
+            <Typography>
+              Заказ № {order.id} создан{" "}
+              {new Date(order.createdAt).toLocaleString()}
+            </Typography>
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
               {isEditing ? (
                 <>
