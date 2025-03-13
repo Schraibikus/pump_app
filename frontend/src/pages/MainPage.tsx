@@ -11,7 +11,7 @@ export const MainPage = () => {
       <Link to="/1" style={{ textDecoration: "none" }}>
         {" "}
         <img
-          src="/png/result_02.png"
+          src="/png/sin32_02.png"
           alt="logo"
           style={{
             maxWidth: "100%",
