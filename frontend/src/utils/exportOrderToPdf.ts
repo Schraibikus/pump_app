@@ -53,13 +53,13 @@ export const exportOrderToPdf = (order: Order, fileName: string) => {
           ? part.description
             ? `${part.designation} (${part.description})`
             : part.designation
-          : part.description || "—";
+          : part.description || "";
 
         tableData.push([
           part.name,
           designationAndDescription,
           String(part.quantity),
-          String(part.comment),
+          part.comment || "",
         ]);
       });
     });

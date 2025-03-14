@@ -179,7 +179,7 @@ export const exportOrderToDoc = (order: Order, fileName: string) => {
           ? part.description
             ? `${part.designation} (${part.description})`
             : part.designation
-          : part.description || "—";
+          : part.description || "";
         tableRows.push(
           new TableRow({
             children: [
@@ -222,7 +222,7 @@ export const exportOrderToDoc = (order: Order, fileName: string) => {
                   new Paragraph({
                     children: [
                       new TextRun({
-                        text: String(part.comment),
+                        text: part.comment || "",
                       }),
                     ],
                   }),

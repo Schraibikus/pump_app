@@ -150,6 +150,7 @@ export const OrderItem = ({
         },
       };
 
+      console.log(payload);
       await dispatch(patchOrder(payload)).unwrap();
       setIsEditing(false);
     } catch (error) {
