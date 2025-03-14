@@ -22,9 +22,12 @@ import {
   rootShaftLinks,
   crossheadKnotLinks,
   housingSealTwoLinks,
+  waterworksTwoLinks,
   plungerSealTwoLinks,
   sealPackageTwoLinks,
-  // planetaryCylindricalGearboxLinks,
+  valveThreeLinks,
+  valveFourLinks,
+  planetaryCylindricalGearboxLinks,
 } from "./constants.js";
 
 dotenv.config();
@@ -168,10 +171,12 @@ async function setupDatabase() {
       rootShaftLinks,
       crossheadKnotLinks,
       housingSealTwoLinks,
-
+      waterworksTwoLinks,
       plungerSealTwoLinks,
       sealPackageTwoLinks,
-      // planetaryCylindricalGearboxLinks,
+      valveThreeLinks,
+      valveFourLinks,
+      planetaryCylindricalGearboxLinks,
     ];
 
     // Вставка данных в products, parts, part_alternative_sets
