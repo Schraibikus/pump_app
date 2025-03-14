@@ -38,6 +38,8 @@ export const MainPage = () => {
             <img
               src={product.path}
               alt="logo"
+              width={720}
+              height={470}
               style={{
                 maxWidth: "100%",
                 maxHeight: "100%",
