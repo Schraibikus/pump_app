@@ -49,6 +49,51 @@ export const products = [
   },
   {
     head: 2,
+    path: "threePlungerPump",
+    name: "Насос трехплунжерный СИН32.00.100.000",
+  },
+  {
+    head: 2,
+    path: "rootShaft",
+    name: "Вал коренной СИН32.00.103.000А",
+  },
+  {
+    head: 2,
+    path: "crossheadKnot",
+    name: "Узел крейцкопфа СИН32.04.100.10.00.000",
+  },
+  {
+    head: 2,
+    path: "housingSeal",
+    name: "Уплотнение корпуса СИН32.04.100.09.00.000А",
+  },
+  {
+    head: 2,
+    path: "waterworks",
+    name: "Гидроузел СИН32.04.100.04.00.000",
+  },
+  {
+    head: 2,
+    path: "plungerSeal",
+    name: "Уплотнение плунжера СИН32.00.108.500",
+  },
+  {
+    head: 2,
+    path: "sealPackage",
+    name: "Пакет уплотнения СИН32.00.108.510",
+  },
+  {
+    head: 2,
+    path: "valve",
+    name: "Клапан СИН61.00.108.600-01",
+  },
+  {
+    head: 2,
+    path: "valveTwo",
+    name: "Клапан СИН31.100.170",
+  },
+  {
+    head: 2,
     path: "planetaryCylindricalGearbox",
     name: "Редуктор планетарно-цилиндрический СИН32.00",
   },
