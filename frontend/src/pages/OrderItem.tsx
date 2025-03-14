@@ -259,7 +259,7 @@ export const OrderItem = ({
           </Box>
           {isEditing && (
             <Box sx={{ display: "flex", gap: 2, my: 2 }}>
-              <FormControl sx={{ minWidth: 120 }}>
+              <FormControl sx={{ minWidth: 160 }}>
                 <InputLabel id="product-head-label">Группа изделий</InputLabel>
                 <Select
                   labelId="product-head-label"
@@ -273,7 +273,11 @@ export const OrderItem = ({
                   {[...new Set(products.map((product) => product.head))].map(
                     (head) => (
                       <MenuItem key={head} value={head}>
-                        {head}
+                        {head === 1
+                          ? "СИН32.02"
+                          : head === 2
+                            ? "СИН32.00"
+                            : head}
                       </MenuItem>
                     )
                   )}
