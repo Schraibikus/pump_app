@@ -397,7 +397,7 @@ export const OrderItem = ({
                                 multiline
                                 fullWidth
                                 label="Ваш комментарий"
-                                value={part.comment}
+                                value={part.comment || ""}
                                 onChange={(e) =>
                                   handleCommentChange(part.id, e.target.value)
                                 }
