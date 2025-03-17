@@ -17,6 +17,7 @@ import {
   Select,
   MenuItem,
   SelectChangeEvent,
+  InputAdornment,
 } from "@mui/material";
 import { Fragment, useState, useEffect } from "react";
 import { ExportDropdown } from "@/components/ExportDropdown";
@@ -98,6 +99,12 @@ export const OrderItem = ({
 
   const handleEditClick = () => {
     setIsEditing(true);
+  };
+
+  const handleDeleteComment = (id: number) => {
+    setEditedParts((prev) =>
+      prev.map((part) => (part.id === id ? { ...part, comment: "" } : part))
+    );
   };
 
   const handleSaveClick = async () => {
@@ -209,7 +216,7 @@ export const OrderItem = ({
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            width: "60vw",
+            width: "80vw",
             maxHeight: "80vh",
             bgcolor: "background.paper",
             boxShadow: 24,
@@ -386,12 +393,36 @@ export const OrderItem = ({
                           <TableCell>
                             {isEditing ? (
                               <TextField
-                                value={part.comment || ""}
+                                sx={{ mt: 1, maxWidth: 400 }}
+                                multiline
+                                fullWidth
+                                label="Ваш комментарий"
+                                value={part.comment}
                                 onChange={(e) =>
                                   handleCommentChange(part.id, e.target.value)
                                 }
-                                size="small"
-                                fullWidth
+                                slotProps={{
+                                  input: {
+                                    sx: {
+                                      background: "white",
+                                    },
+                                    endAdornment: part.comment && (
+                                      <InputAdornment position="end">
+                                        <IconButton
+                                          aria-label="Очистить комментарий"
+                                          title={"Очистить комментарий"}
+                                          sx={{ py: 0 }}
+                                          onClick={() =>
+                                            handleDeleteComment(part.id)
+                                          }
+                                          edge="end"
+                                        >
+                                          <DeleteIcon sx={{ color: "red" }} />
+                                        </IconButton>
+                                      </InputAdornment>
+                                    ),
+                                  },
+                                }}
                               />
                             ) : (
                               part.comment || ""
@@ -401,6 +432,7 @@ export const OrderItem = ({
                             <TableCell>
                               <IconButton
                                 color="error"
+                                title={"Удалить часть"}
                                 onClick={() => handleDeletePart(part.id)}
                               >
                                 <DeleteIcon />

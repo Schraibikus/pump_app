@@ -11,7 +11,7 @@ export const OrdersPage = () => {
   const dispatch = useAppDispatch();
   const { orders, loading, error } = useAppSelector((state) => state.orders);
   const [openOrderId, setOpenOrderId] = useState<number | null>(null);
-  console.log(orders);
+  // console.log(orders);
   const [currentPage, setCurrentPage] = useState(1);
   const ordersPerPage = 10; // Количество заказов на странице
   const indexOfLastOrder = currentPage * ordersPerPage;

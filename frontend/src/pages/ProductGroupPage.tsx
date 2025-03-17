@@ -51,7 +51,7 @@ export const ProductGroupPage = () => {
   return (
     <Box
       sx={{
-        columnCount: 3,
+        columnCount: 2,
         textAlign: "center",
         p: 4,
       }}
@@ -61,17 +61,19 @@ export const ProductGroupPage = () => {
           <Button
             sx={{
               breakInside: "avoid-column",
-
               width: "70%",
               my: 1,
+
               transition: "all 0.3s ease-in-out",
-              // "&:last-child": { color: "red" },
               "&:hover": {
                 transform: "scale(1.05)",
+                bgcolor: "primary.main",
+                color: "white",
               },
             }}
             key={id}
             variant="contained"
+            color="inherit"
             onClick={() => navigate(`/${head}${path}`)}
           >
             {name}
