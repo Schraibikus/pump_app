@@ -53,7 +53,7 @@ export const ProductGroupPage = () => {
     <Box
       sx={{
         columnCount: 2,
-        textAlign: "center",
+        textAlign: "-webkit-center",
         p: 4,
       }}
     >
@@ -70,7 +70,7 @@ export const ProductGroupPage = () => {
                 width: "80%",
                 height: "50px",
                 my: 2,
-                "&:first-child": { mt: 0 },
+                "&:first-of-type": { mt: 0 },
                 transition: "all 0.3s ease-in-out",
                 "&:hover": {
                   transform: "scale(1.05)",
