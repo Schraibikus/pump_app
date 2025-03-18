@@ -740,7 +740,7 @@ export const threePlungerPumpLinks: Product = {
 export const connectingRodLinks: Product = {
   id: 2,
   src: "/png/sin32_02/connectingRod.png",
-  path: "/connecting-rod",
+  path: "/connectingRod",
   width: 100,
   name: "Шатун СИН32.02.102.000",
   drawing: 2,
@@ -885,8 +885,8 @@ export const connectingRodLinks: Product = {
 export const tractionUnitLinks: Product = {
   id: 3,
   src: "/png/sin32_02/tractionUnit.png",
-  path: "/traction-unit",
-  width: 100,
+  path: "/tractionUnit",
+  width: 90,
   name: "Узел тяги",
   drawing: 3,
   head: 1,
@@ -902,7 +902,7 @@ export const tractionUnitLinks: Product = {
       description: "Переменные данные",
       quantity: 1,
       positioningTop: 3,
-      positioningLeft: 15,
+      positioningLeft: 19,
       alternativeSets: {
         "СИН32.02.105.000 (D пл. 100 мм)": {
           position: 1,
@@ -929,7 +929,7 @@ export const tractionUnitLinks: Product = {
       description: "Переменные данные",
       quantity: 1,
       positioningTop: 3,
-      positioningLeft: 63,
+      positioningLeft: 61,
       alternativeSets: {
         "СИН32.02.105.000 (D пл. 100 мм)": {
           position: 2,
@@ -956,7 +956,7 @@ export const tractionUnitLinks: Product = {
       description: "Переменные данные",
       quantity: 4,
       positioningTop: 3,
-      positioningLeft: 82,
+      positioningLeft: 78,
       alternativeSets: {
         "СИН32.02.105.000 (D пл. 100 мм)": {
           position: 3,
@@ -983,7 +983,7 @@ export const tractionUnitLinks: Product = {
       description: "Переменные данные",
       quantity: 1,
       positioningTop: 3,
-      positioningLeft: 95,
+      positioningLeft: 90,
       alternativeSets: {
         "СИН32.02.105.000 (D пл. 100 мм)": {
           position: 4,
@@ -1884,7 +1884,7 @@ export const housingSealLinks: Product = {
   id: 10,
   src: "/png/sin32_02/housingSeal.png",
   path: "/housingSeal",
-  width: 80,
+  width: 70,
   name: "Уплотнение корпуса",
   drawing: 10,
   head: 1,
@@ -1899,7 +1899,7 @@ export const housingSealLinks: Product = {
       description: "1-4 с Ø4 ГОСТ 6467-79 (L=860мм)",
       quantity: 1,
       positioningTop: -1,
-      positioningLeft: 24,
+      positioningLeft: 27,
     },
     {
       id: 2,
@@ -1911,7 +1911,7 @@ export const housingSealLinks: Product = {
       designation: "СИН32.02.100.003",
       quantity: 3,
       positioningTop: -1,
-      positioningLeft: 39,
+      positioningLeft: 40,
     },
     {
       id: 3,
@@ -1935,7 +1935,7 @@ export const housingSealLinks: Product = {
       description: "8.65Г.019 ГОСТ6402-70",
       quantity: 12,
       positioningTop: 94,
-      positioningLeft: 43,
+      positioningLeft: 44,
     },
     {
       id: 5,
@@ -1959,7 +1959,7 @@ export const housingSealLinks: Product = {
       description: "М8-8gx25.58.019 ГОСТ 7798-70",
       quantity: 12,
       positioningTop: 94,
-      positioningLeft: 55,
+      positioningLeft: 54,
     },
     {
       id: 7,
@@ -1971,7 +1971,7 @@ export const housingSealLinks: Product = {
       designation: "СИН32.02.100.004",
       quantity: 3,
       positioningTop: 94,
-      positioningLeft: 79,
+      positioningLeft: 75,
     },
   ],
 };
@@ -1980,7 +1980,7 @@ export const installingTheSensorIndicatorLinks: Product = {
   id: 11,
   src: "/png/sin32_02/installingTheSensorIndicator.png",
   path: "/installingTheSensorIndicator",
-  width: 90,
+  width: 65,
   name: "Установка индикатора датчика (до №3651)",
   drawing: 11,
   head: 1,
@@ -1995,7 +1995,7 @@ export const installingTheSensorIndicatorLinks: Product = {
       designation: "СИН32.02.106.001",
       quantity: 3,
       positioningTop: 86,
-      positioningLeft: 19,
+      positioningLeft: 28,
     },
     {
       id: 2,
@@ -2007,7 +2007,7 @@ export const installingTheSensorIndicatorLinks: Product = {
       description: "1-4 Md4 ГОСТ 6467-79, L=800 мм",
       quantity: 3,
       positioningTop: 86,
-      positioningLeft: 11,
+      positioningLeft: 22,
     },
     {
       id: 3,
@@ -2019,7 +2019,7 @@ export const installingTheSensorIndicatorLinks: Product = {
       description: "16.03.019 ГОСТ 11371-78",
       quantity: 12,
       positioningTop: 94,
-      positioningLeft: 44,
+      positioningLeft: 46,
     },
     {
       id: 4,
@@ -2043,7 +2043,7 @@ export const installingTheSensorIndicatorLinks: Product = {
       description: "М16-8gх50.58.019 ГОСТ 7798-70",
       quantity: 12,
       positioningTop: 94,
-      positioningLeft: 54,
+      positioningLeft: 53,
     },
     {
       id: 6,
@@ -2055,7 +2055,7 @@ export const installingTheSensorIndicatorLinks: Product = {
       description: "ISNFC2A-32 P-4LS4 + гайка",
       quantity: 12,
       positioningTop: 73,
-      positioningLeft: 77,
+      positioningLeft: 69,
     },
     {
       id: 7,
@@ -2067,7 +2067,7 @@ export const installingTheSensorIndicatorLinks: Product = {
       designation: "СИН46.02.200.003",
       quantity: 3,
       positioningTop: 61,
-      positioningLeft: 77,
+      positioningLeft: 69,
     },
     {
       id: 8,
@@ -2079,7 +2079,7 @@ export const installingTheSensorIndicatorLinks: Product = {
       description: "S2610 1/2",
       quantity: 3,
       positioningTop: 53,
-      positioningLeft: 77,
+      positioningLeft: 69,
     },
   ],
 };
@@ -2088,7 +2088,7 @@ export const installingTheSensorIndicatorTwoLinks: Product = {
   id: 12,
   src: "/png/sin32_02/installingTheSensorIndicatorTwo.png",
   path: "/installingTheSensorIndicatorTwo",
-  width: 80,
+  width: 70,
   name: "Установка индикатора датчика (с №3651)",
   drawing: 12,
   head: 1,
@@ -2103,7 +2103,7 @@ export const installingTheSensorIndicatorTwoLinks: Product = {
       designation: "СИН32.02.106.101",
       quantity: 1,
       positioningTop: 65,
-      positioningLeft: 10,
+      positioningLeft: 15,
     },
     {
       id: 2,
@@ -2115,7 +2115,7 @@ export const installingTheSensorIndicatorTwoLinks: Product = {
       description: "1-4 Md4 ГОСТ 6467-79, L=800 мм",
       quantity: 1,
       positioningTop: 56,
-      positioningLeft: 10,
+      positioningLeft: 15,
     },
     {
       id: 3,
@@ -2127,7 +2127,7 @@ export const installingTheSensorIndicatorTwoLinks: Product = {
       description: "А20 ГОСТ 13942-86",
       quantity: 1,
       positioningTop: 48,
-      positioningLeft: 10,
+      positioningLeft: 15,
     },
     {
       id: 4,
@@ -2139,7 +2139,7 @@ export const installingTheSensorIndicatorTwoLinks: Product = {
       description: "016-020-25-2-3",
       quantity: 1,
       positioningTop: 36,
-      positioningLeft: 88,
+      positioningLeft: 82,
     },
     {
       id: 5,
@@ -2151,7 +2151,7 @@ export const installingTheSensorIndicatorTwoLinks: Product = {
       designation: "СИН32.02.106.102",
       quantity: 1,
       positioningTop: 58,
-      positioningLeft: 88,
+      positioningLeft: 82,
     },
     {
       id: 6,
@@ -2163,7 +2163,7 @@ export const installingTheSensorIndicatorTwoLinks: Product = {
       description: "ISNFC2A-32 P-4LS4 + гайка",
       quantity: 1,
       positioningTop: 67,
-      positioningLeft: 88,
+      positioningLeft: 82,
     },
     {
       id: 7,
@@ -2175,7 +2175,7 @@ export const installingTheSensorIndicatorTwoLinks: Product = {
       description: "М8-8gх20.58.019 ГОСТ 11738-84",
       quantity: 8,
       positioningTop: 82,
-      positioningLeft: 88,
+      positioningLeft: 82,
     },
     {
       id: 8,
@@ -2187,7 +2187,7 @@ export const installingTheSensorIndicatorTwoLinks: Product = {
       description: "8.65Г.019 ГОСТ 6402-70",
       quantity: 8,
       positioningTop: 88,
-      positioningLeft: 88,
+      positioningLeft: 82,
     },
     {
       id: 9,
@@ -2199,7 +2199,7 @@ export const installingTheSensorIndicatorTwoLinks: Product = {
       designation: "СИН51.00.100.016-02",
       quantity: 8,
       positioningTop: 93,
-      positioningLeft: 88,
+      positioningLeft: 82,
     },
     {
       id: 10,
@@ -2211,7 +2211,7 @@ export const installingTheSensorIndicatorTwoLinks: Product = {
       description: "S2610 1/2",
       quantity: 1,
       positioningTop: 27,
-      positioningLeft: 88,
+      positioningLeft: 82,
     },
   ],
 };
