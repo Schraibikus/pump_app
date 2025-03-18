@@ -41,6 +41,8 @@ function startServer() {
   // 🔹 Получение деталей продукта по его ID
   app.get("/api/products/:id/parts", async (req, res) => {
     const { id } = req.params;
+    // console.log(`Запрос деталей продукта с ID: ${id}`);
+
     try {
       const { rows } = await pool.query(
         `
@@ -78,6 +80,8 @@ function startServer() {
         `,
         [id]
       );
+
+      // console.log("Данные из базы:", rows);
 
       // Группируем данные по частям и добавляем альтернативные наборы свойств
       const groupedParts = rows.reduce((acc: { [key: number]: any }, row) => {
@@ -123,6 +127,8 @@ function startServer() {
 
       const result = Object.values(groupedParts);
       const camelCaseResult = convertToCamelCase(result);
+
+      // console.log("Данные после группировки:", camelCaseResult);
 
       res.json(camelCaseResult);
     } catch (error: any) {

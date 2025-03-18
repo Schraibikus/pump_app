@@ -2784,13 +2784,13 @@ export const reducerLinks: Product = {
   path: "/reducer",
   width: 140,
   name: "Редуктор СИН32.02",
-  drawing: 1,
+  drawing: 15,
   head: 1,
   parts: [
     {
       id: 1,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 1,
       name: "Корпус",
@@ -2802,7 +2802,7 @@ export const reducerLinks: Product = {
     {
       id: 2,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 2,
       name: "Колесо корончатое",
@@ -2814,7 +2814,7 @@ export const reducerLinks: Product = {
     {
       id: 3,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 3,
       name: "Передача планетарная",
@@ -2826,7 +2826,7 @@ export const reducerLinks: Product = {
     {
       id: 4,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 4,
       name: "Фланец-проставка",
@@ -2838,7 +2838,7 @@ export const reducerLinks: Product = {
     {
       id: 5,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 5,
       name: "Крышка",
@@ -2850,7 +2850,7 @@ export const reducerLinks: Product = {
     {
       id: 6,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 6,
       name: "Кожух",
@@ -2862,7 +2862,7 @@ export const reducerLinks: Product = {
     {
       id: 7,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 7,
       name: "Вентилятор осевой",
@@ -2874,7 +2874,7 @@ export const reducerLinks: Product = {
     {
       id: 8,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 12,
       name: "Заглушка",
@@ -2886,7 +2886,7 @@ export const reducerLinks: Product = {
     {
       id: 9,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 13,
       name: "Сапун",
@@ -2898,7 +2898,7 @@ export const reducerLinks: Product = {
     {
       id: 10,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 14,
       name: "Шнур",
@@ -2910,7 +2910,7 @@ export const reducerLinks: Product = {
     {
       id: 11,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 15,
       name: "Шестерня солнечная",
@@ -2922,7 +2922,7 @@ export const reducerLinks: Product = {
     {
       id: 12,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 16,
       name: "Кольцо",
@@ -2934,7 +2934,7 @@ export const reducerLinks: Product = {
     {
       id: 13,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 17,
       name: "Колесо зубчатое",
@@ -2946,7 +2946,7 @@ export const reducerLinks: Product = {
     {
       id: 14,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 18,
       name: "Подшипник",
@@ -2958,7 +2958,7 @@ export const reducerLinks: Product = {
     {
       id: 15,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 19,
       name: "Колесо зубчатое",
@@ -2970,7 +2970,7 @@ export const reducerLinks: Product = {
     {
       id: 16,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 20,
       name: "Вал шестерня",
@@ -2982,7 +2982,7 @@ export const reducerLinks: Product = {
     {
       id: 17,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 21,
       name: "Втулка шлицевая",
@@ -2994,7 +2994,7 @@ export const reducerLinks: Product = {
     {
       id: 18,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 22,
       name: "Шпилька",
@@ -3006,7 +3006,7 @@ export const reducerLinks: Product = {
     {
       id: 19,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 23,
       name: "Шайба",
@@ -3018,7 +3018,7 @@ export const reducerLinks: Product = {
     {
       id: 20,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 24,
       name: "Шайба",
@@ -3030,7 +3030,7 @@ export const reducerLinks: Product = {
     {
       id: 21,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 25,
       name: "Гайка",
@@ -3042,7 +3042,7 @@ export const reducerLinks: Product = {
     {
       id: 22,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 26,
       name: "Манжета",
@@ -3054,7 +3054,7 @@ export const reducerLinks: Product = {
     {
       id: 23,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 27,
       name: "Шпонка",
@@ -3066,7 +3066,7 @@ export const reducerLinks: Product = {
     {
       id: 24,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 28,
       name: "Винт",
@@ -3078,7 +3078,7 @@ export const reducerLinks: Product = {
     {
       id: 25,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 29,
       name: "Шайба",
@@ -3090,7 +3090,7 @@ export const reducerLinks: Product = {
     {
       id: 26,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 30,
       name: "Шайба",
@@ -3102,7 +3102,7 @@ export const reducerLinks: Product = {
     {
       id: 27,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 31,
       name: "Манжета",
@@ -3114,7 +3114,7 @@ export const reducerLinks: Product = {
     {
       id: 28,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 33,
       name: "Полумуфта",
@@ -3126,7 +3126,7 @@ export const reducerLinks: Product = {
     {
       id: 29,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 34,
       name: "Шайба",
@@ -3138,7 +3138,7 @@ export const reducerLinks: Product = {
     {
       id: 30,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 35,
       name: "Пластина колированная",
@@ -3150,7 +3150,7 @@ export const reducerLinks: Product = {
     {
       id: 31,
       parentProductId: 15,
-      productDrawing: 1,
+      productDrawing: 15,
       productName: "Редуктор СИН32.02",
       position: 36,
       name: "Болт",
@@ -3174,7 +3174,7 @@ export const planetaryTransmissionLinks: Product = {
     {
       id: 1,
       parentProductId: 16,
-      productDrawing: 2,
+      productDrawing: 16,
       productName: "Передача планетарная СИН32.02.600.000",
       position: 1,
       name: "Водило",
@@ -3186,7 +3186,7 @@ export const planetaryTransmissionLinks: Product = {
     {
       id: 2,
       parentProductId: 16,
-      productDrawing: 2,
+      productDrawing: 16,
       productName: "Передача планетарная СИН32.02.600.000",
       position: 2,
       name: "Подшипник",
@@ -3198,7 +3198,7 @@ export const planetaryTransmissionLinks: Product = {
     {
       id: 3,
       parentProductId: 16,
-      productDrawing: 2,
+      productDrawing: 16,
       productName: "Передача планетарная СИН32.02.600.000",
       position: 3,
       name: "Подшипник",
@@ -3210,7 +3210,7 @@ export const planetaryTransmissionLinks: Product = {
     {
       id: 4,
       parentProductId: 16,
-      productDrawing: 2,
+      productDrawing: 16,
       productName: "Передача планетарная СИН32.02.600.000",
       position: 4,
       name: "Подшипник",
@@ -3222,7 +3222,7 @@ export const planetaryTransmissionLinks: Product = {
     {
       id: 5,
       parentProductId: 16,
-      productDrawing: 2,
+      productDrawing: 16,
       productName: "Передача планетарная СИН32.02.600.000",
       position: 5,
       name: "Кольцо",
@@ -3234,7 +3234,7 @@ export const planetaryTransmissionLinks: Product = {
     {
       id: 6,
       parentProductId: 16,
-      productDrawing: 2,
+      productDrawing: 16,
       productName: "Передача планетарная СИН32.02.600.000",
       position: 6,
       name: "Кольцо",
@@ -3246,7 +3246,7 @@ export const planetaryTransmissionLinks: Product = {
     {
       id: 7,
       parentProductId: 16,
-      productDrawing: 2,
+      productDrawing: 16,
       productName: "Передача планетарная СИН32.02.600.000",
       position: 7,
       name: "Сателлит",
@@ -3258,7 +3258,7 @@ export const planetaryTransmissionLinks: Product = {
     {
       id: 8,
       parentProductId: 16,
-      productDrawing: 2,
+      productDrawing: 16,
       productName: "Передача планетарная СИН32.02.600.000",
       position: 8,
       name: "Ось",
@@ -3608,13 +3608,13 @@ export const crossheadKnotLinks: Product = {
   path: "/crossheadKnot",
   width: 140,
   name: "Узел крейцкопфа СИН32.04.100.10.00.000",
-  drawing: 4,
+  drawing: 3,
   head: 2,
   parts: [
     {
       id: 1,
       parentProductId: 19,
-      productDrawing: 4,
+      productDrawing: 3,
       productName: "Узел крейцкопфа СИН32.04.100.10.00.000",
       position: 1,
       name: "Крейцкопф",
@@ -3626,7 +3626,7 @@ export const crossheadKnotLinks: Product = {
     {
       id: 2,
       parentProductId: 19,
-      productDrawing: 4,
+      productDrawing: 3,
       productName: "Узел крейцкопфа СИН32.04.100.10.00.000",
       position: 2,
       name: "Тяга",
@@ -3638,7 +3638,7 @@ export const crossheadKnotLinks: Product = {
     {
       id: 3,
       parentProductId: 19,
-      productDrawing: 4,
+      productDrawing: 3,
       productName: "Узел крейцкопфа СИН32.04.100.10.00.000",
       position: 3,
       name: "Хомут",
@@ -3650,7 +3650,7 @@ export const crossheadKnotLinks: Product = {
     {
       id: 4,
       parentProductId: 19,
-      productDrawing: 4,
+      productDrawing: 3,
       productName: "Узел крейцкопфа СИН32.04.100.10.00.000",
       position: 4,
       name: "Кольцо",
@@ -3662,7 +3662,7 @@ export const crossheadKnotLinks: Product = {
     {
       id: 5,
       parentProductId: 19,
-      productDrawing: 4,
+      productDrawing: 3,
       productName: "Узел крейцкопфа СИН32.04.100.10.00.000",
       position: 5,
       name: "Ось",
@@ -3674,7 +3674,7 @@ export const crossheadKnotLinks: Product = {
     {
       id: 6,
       parentProductId: 19,
-      productDrawing: 4,
+      productDrawing: 3,
       productName: "Узел крейцкопфа СИН32.04.100.10.00.000",
       position: 6,
       name: "Упор",
@@ -3700,7 +3700,7 @@ export const crossheadKnotLinks: Product = {
     {
       id: 7,
       parentProductId: 19,
-      productDrawing: 4,
+      productDrawing: 3,
       productName: "Узел крейцкопфа СИН32.04.100.10.00.000",
       position: 7,
       name: "Футорка",
@@ -3726,7 +3726,7 @@ export const crossheadKnotLinks: Product = {
     {
       id: 8,
       parentProductId: 19,
-      productDrawing: 4,
+      productDrawing: 3,
       productName: "Узел крейцкопфа СИН32.04.100.10.00.000",
       position: 8,
       name: "Штифт",
@@ -3758,7 +3758,7 @@ export const housingSealTwoLinks: Product = {
   path: "/housingSeal",
   width: 120,
   name: "Уплотнение корпуса СИН32.04.100.09.00.000А",
-  drawing: 5,
+  drawing: 4,
   head: 2,
   parts: [
     {
@@ -3818,13 +3818,13 @@ export const waterworksTwoLinks: Product = {
   path: "/waterworks",
   width: 60,
   name: "Гидроузел СИН32.04.100.04.00.000",
-  drawing: 6,
+  drawing: 5,
   head: 2,
   parts: [
     {
       id: 1,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 1,
       name: "Коробка клапанная",
@@ -3836,7 +3836,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 2,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 2,
       name: "Корпус коллектора",
@@ -3848,7 +3848,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 3,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 3,
       name: "Кольцо 135-145-46-2-3",
@@ -3860,7 +3860,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 4,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 4,
       name: "Заглушка",
@@ -3872,7 +3872,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 5,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 5,
       name: "Кольцо 140-150-46-2-4",
@@ -3884,7 +3884,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 6,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 6,
       name: "Заглушка",
@@ -3896,7 +3896,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 7,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 7,
       name: "Прокладка",
@@ -3908,7 +3908,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 8,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 8,
       name: "Фильтр",
@@ -3920,7 +3920,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 9,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 9,
       name: "Кольцо 108-115-46-2-4",
@@ -3932,7 +3932,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 10,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 10,
       name: "Заглушка",
@@ -3944,7 +3944,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 11,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 11,
       name: "Гайка",
@@ -3956,7 +3956,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 12,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 12,
       name: "Крышка",
@@ -3968,7 +3968,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 13,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 13,
       name: "Кольцо",
@@ -3982,7 +3982,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 14,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 14,
       name: "Манжета",
@@ -3996,7 +3996,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 15,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 15,
       name: "Крышка",
@@ -4008,7 +4008,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 16,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 16,
       name: "Пружина сжатия",
@@ -4024,7 +4024,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 17,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 17,
       name: "Клапан",
@@ -4066,7 +4066,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 18,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 18,
       name: "Седло",
@@ -4101,7 +4101,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 19,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 19,
       name: "Кольцо",
@@ -4118,7 +4118,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 20,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 20,
       name: "Опора клапана",
@@ -4148,7 +4148,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 21,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 21,
       name: "Кольцо",
@@ -4160,7 +4160,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 22,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 22,
       name: "Манжета",
@@ -4172,7 +4172,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 23,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 23,
       name: "Кольцо стопорное",
@@ -4184,7 +4184,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 24,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 24,
       name: "Уплотнение плунжера",
@@ -4228,7 +4228,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 25,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 25,
       name: "Плунжер",
@@ -4272,7 +4272,7 @@ export const waterworksTwoLinks: Product = {
     {
       id: 26,
       parentProductId: 21,
-      productDrawing: 6,
+      productDrawing: 5,
       productName: "Гидроузел СИН32.04.100.04.00.000",
       position: 26,
       name: "Коллектор",
@@ -4304,13 +4304,13 @@ export const plungerSealTwoLinks: Product = {
   path: "/plungerSeal",
   width: 100,
   name: "Уплотнение плунжера СИН32.00.108.500",
-  drawing: 7,
+  drawing: 6,
   head: 2,
   parts: [
     {
       id: 1,
       parentProductId: 22,
-      productDrawing: 7,
+      productDrawing: 6,
       productName: "Уплотнение плунжера СИН32.00.108.500",
       position: 1,
       name: "Стакан",
@@ -4348,7 +4348,7 @@ export const plungerSealTwoLinks: Product = {
     {
       id: 2,
       parentProductId: 22,
-      productDrawing: 7,
+      productDrawing: 6,
       productName: "Уплотнение плунжера СИН32.00.108.500",
       position: 2,
       name: "Гайка",
@@ -4386,7 +4386,7 @@ export const plungerSealTwoLinks: Product = {
     {
       id: 3,
       parentProductId: 22,
-      productDrawing: 7,
+      productDrawing: 6,
       productName: "Уплотнение плунжера СИН32.00.108.500",
       position: 3,
       name: "Фонарь",
@@ -4424,7 +4424,7 @@ export const plungerSealTwoLinks: Product = {
     {
       id: 4,
       parentProductId: 22,
-      productDrawing: 7,
+      productDrawing: 6,
       productName: "Уплотнение плунжера СИН32.00.108.500",
       position: 4,
       name: "Пакет уплотнения",
@@ -4473,13 +4473,13 @@ export const sealPackageTwoLinks: Product = {
   path: "/sealPackage",
   width: 100,
   name: "Пакет уплотнения СИН32.00.108.510",
-  drawing: 8,
+  drawing: 7,
   head: 2,
   parts: [
     {
       id: 1,
       parentProductId: 23,
-      productDrawing: 8,
+      productDrawing: 7,
       productName: "Пакет уплотнения СИН32.00.108.510",
       position: 1,
       name: "Кольцо",
@@ -4518,7 +4518,7 @@ export const sealPackageTwoLinks: Product = {
     {
       id: 2,
       parentProductId: 23,
-      productDrawing: 8,
+      productDrawing: 7,
       productName: "Пакет уплотнения СИН32.00.108.510",
       position: 2,
       name: "Кольцо",
@@ -4557,7 +4557,7 @@ export const sealPackageTwoLinks: Product = {
     {
       id: 3,
       parentProductId: 23,
-      productDrawing: 8,
+      productDrawing: 7,
       productName: "Пакет уплотнения СИН32.00.108.510",
       position: 3,
       name: "Манжета",
@@ -4596,7 +4596,7 @@ export const sealPackageTwoLinks: Product = {
     {
       id: 4,
       parentProductId: 23,
-      productDrawing: 8,
+      productDrawing: 7,
       productName: "Пакет уплотнения СИН32.00.108.510",
       position: 4,
       name: "Кольцо",
@@ -4635,7 +4635,7 @@ export const sealPackageTwoLinks: Product = {
     {
       id: 5,
       parentProductId: 23,
-      productDrawing: 8,
+      productDrawing: 7,
       productName: "Пакет уплотнения СИН32.00.108.510",
       position: 5,
       name: "Манжета",
@@ -4680,13 +4680,13 @@ export const valveThreeLinks: Product = {
   path: "/valve",
   width: 100,
   name: "Клапан СИН61.00.108.600-01",
-  drawing: 9,
+  drawing: 8,
   head: 2,
   parts: [
     {
       id: 1,
       parentProductId: 24,
-      productDrawing: 9,
+      productDrawing: 8,
       productName: "Клапан СИН61.00.108.600-01",
       position: 1,
       name: "Корпус клапана",
@@ -4698,7 +4698,7 @@ export const valveThreeLinks: Product = {
     {
       id: 2,
       parentProductId: 24,
-      productDrawing: 9,
+      productDrawing: 8,
       productName: "Клапан СИН61.00.108.600-01",
       position: 2,
       name: "Прокладка",
@@ -4716,7 +4716,7 @@ export const valveFourLinks: Product = {
   path: "/valveTwo",
   width: 100,
   name: "Клапан СИН31.100.170",
-  drawing: 10,
+  drawing: 9,
   head: 2,
   parts: [
     {
@@ -4788,13 +4788,13 @@ export const planetaryCylindricalGearboxLinks: Product = {
   path: "/planetaryCylindricalGearbox",
   width: 120,
   name: "Редуктор планетарно-цилиндрический СИН32",
-  drawing: 1,
+  drawing: 10,
   head: 2,
   parts: [
     {
       id: 1,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 1,
       name: "Передача планетарная",
@@ -4806,7 +4806,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 2,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 2,
       name: "Водило",
@@ -4817,7 +4817,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 3,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 3,
       name: "Палец",
@@ -4828,7 +4828,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 4,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 4,
       name: "Сателлит",
@@ -4840,7 +4840,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 5,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 5,
       name: "Проставка",
@@ -4852,7 +4852,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 6,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 6,
       name: "Крышка",
@@ -4864,7 +4864,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 7,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 7,
       name: "Вал-шестерня",
@@ -4876,7 +4876,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 8,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 8,
       name: "Шестерня солнечная",
@@ -4888,7 +4888,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 9,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 9,
       name: "Заглушка",
@@ -4900,7 +4900,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 10,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 10,
       name: "Заглушка",
@@ -4912,7 +4912,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 11,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 11,
       name: "Корпус",
@@ -4924,7 +4924,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 12,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 12,
       name: "Кольцо",
@@ -4936,7 +4936,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 13,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 13,
       name: "Кольцо",
@@ -4948,7 +4948,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 14,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 14,
       name: "Шестерня паразитная",
@@ -4960,7 +4960,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 15,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 15,
       name: "Колесо зубчатое",
@@ -4972,7 +4972,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 16,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 16,
       name: "Вал промежуточный",
@@ -4984,7 +4984,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 17,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 17,
       name: "Вал выходной",
@@ -4996,7 +4996,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 18,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 18,
       name: "Колесо корончатое",
@@ -5008,7 +5008,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 19,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 19,
       name: "Манжета",
@@ -5020,7 +5020,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 20,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 20,
       name: "Манжета",
@@ -5032,7 +5032,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 21,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 21,
       name: "Подшипник",
@@ -5044,7 +5044,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 22,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 22,
       name: "Подшипник",
@@ -5056,7 +5056,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 23,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 23,
       name: "Подшипник",
@@ -5068,7 +5068,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 24,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 24,
       name: "Подшипник",
@@ -5080,7 +5080,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 25,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 25,
       name: "Подшипник",
@@ -5092,7 +5092,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 26,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 26,
       name: "Насос",
@@ -5104,7 +5104,7 @@ export const planetaryCylindricalGearboxLinks: Product = {
     {
       id: 27,
       parentProductId: 26,
-      productDrawing: 1,
+      productDrawing: 10,
       productName: "Редуктор планетарно-цилиндрический СИН32",
       position: 27,
       name: "Шпонка",
