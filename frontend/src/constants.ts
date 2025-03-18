@@ -1,21 +1,31 @@
-export const products = [
+export const productsFront = [
   {
     head: 1,
     path: "three-plunger-pump",
-    name: "Насос трёхплунжерный СИН32.02",
+    name: "Насос трехплунжерный СИН32.02.100.000",
+    img: "/png/sin32_02/sin32_02.png",
   },
-  { head: 1, path: "connecting-rod", name: "Шатун СИН32.02" },
+  { head: 1, path: "connecting-rod", name: "Шатун СИН32.02.102.000" },
   { head: 1, path: "traction-unit", name: "Узел тяги" },
-  { head: 1, path: "waterworks", name: "Гидроузел СИН32.02" },
-  { head: 1, path: "collector", name: "Коллектор СИН32.02" },
-  { head: 1, path: "valve", name: "Клапан СИН32.00" },
-  { head: 1, path: "valveTwo", name: "Клапан СИН63.00" },
+  {
+    head: 1,
+    path: "waterworks",
+    name: "Гидроузел СИН32.02.109.000 с насоса №3454",
+  },
+  { head: 1, path: "collector", name: "Коллектор СИН32.02.108.100" },
+  {
+    head: 1,
+    path: "valve",
+    name: "Клапан СИН32.00.108.600",
+    img: "/png/sin32_02/Клапан_32.00.108.600.png",
+  },
+  { head: 1, path: "valveTwo", name: "Клапан СИН63.00.108.600" },
   {
     head: 1,
     path: "plungerSeal",
-    name: "Уплотнение плунжера СИН32.02",
+    name: "Уплотнение плунжера СИН32.02.108.500",
   },
-  { head: 1, path: "sealPackage", name: "Пакет уплотнений СИН32.00" },
+  { head: 1, path: "sealPackage", name: "Пакет уплотнений СИН32.00.108.510" },
   { head: 1, path: "housingSeal", name: "Уплотнение корпуса" },
   {
     head: 1,
@@ -30,12 +40,12 @@ export const products = [
   {
     head: 1,
     path: "plungerLubricationSystem",
-    name: "ТСистема смазки плунжеров СИН32.02",
+    name: "Система смазки плунжеров СИН32.02.104.000",
   },
   {
     head: 1,
     path: "pumpLubricationSystem",
-    name: "Система смазки насоса СИН32.02",
+    name: "Система смазки насоса СИН32.02.107.000",
   },
   {
     head: 1,
@@ -51,6 +61,7 @@ export const products = [
     head: 2,
     path: "threePlungerPump",
     name: "Насос трехплунжерный СИН32.00.100.000",
+    img: "/png/sin32_00/sin32_00.png",
   },
   {
     head: 2,
@@ -66,6 +77,7 @@ export const products = [
     head: 2,
     path: "housingSeal",
     name: "Уплотнение корпуса СИН32.04.100.09.00.000А",
+    img: "/png/sin32_00/Уплотнение_корпуса_32.04.100.09.00.000А.png",
   },
   {
     head: 2,

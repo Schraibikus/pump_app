@@ -29,7 +29,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { patchOrder } from "@/store/modules/orders/thunk";
 import { useAppDispatch, useAppSelector } from "@/hooks/useReduxHooks";
 import { useNavigate } from "react-router-dom";
-import { products } from "@/constants";
+import { productsFront } from "@/constants";
 
 export const OrderItem = ({
   orderId,
@@ -278,17 +278,13 @@ export const OrderItem = ({
                   <MenuItem value="">
                     <em>Выберите группу</em>
                   </MenuItem>
-                  {[...new Set(products.map((product) => product.head))].map(
-                    (head) => (
-                      <MenuItem key={head} value={head}>
-                        {head === 1
-                          ? "СИН32.02"
-                          : head === 2
-                            ? "СИН32.00"
-                            : head}
-                      </MenuItem>
-                    )
-                  )}
+                  {[
+                    ...new Set(productsFront.map((product) => product.head)),
+                  ].map((head) => (
+                    <MenuItem key={head} value={head}>
+                      {head === 1 ? "СИН32.02" : head === 2 ? "СИН32.00" : head}
+                    </MenuItem>
+                  ))}
                 </Select>
               </FormControl>
               <FormControl sx={{ minWidth: 120 }}>
@@ -303,7 +299,7 @@ export const OrderItem = ({
                   <MenuItem value="">
                     <em>Выберите изделие</em>
                   </MenuItem>
-                  {products
+                  {productsFront
                     .filter((product) => product.head === selectedProductHead)
                     .map((product) => (
                       <MenuItem key={product.path} value={product.path}>
