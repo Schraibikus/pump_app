@@ -233,7 +233,8 @@ export const OrderItem = ({
               justifyContent: "space-between",
               overflowY: "auto",
               flexGrow: 1,
-              mt: 2,
+              minHeight: "40px",
+              my: 2,
             }}
           >
             <Typography>

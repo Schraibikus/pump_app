@@ -2902,7 +2902,7 @@ export const reducerLinks: Product = {
       productName: "Редуктор СИН32.02",
       position: 14,
       name: "Шнур",
-      description: "1-4С ø6,3 ГОСТ 6467-79",
+      description: "1-4С ø6,3 ГОСТ 6467-79, длина 2 метра",
       quantity: 1,
       positioningTop: -1,
       positioningLeft: 65,
