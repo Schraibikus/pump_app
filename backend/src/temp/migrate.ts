@@ -28,6 +28,7 @@ import {
   valveThreeLinks,
   valveFourLinks,
   planetaryCylindricalGearboxLinks,
+  planetaryTransmissionTwoLinks,
 } from "./constants.js";
 
 dotenv.config();
@@ -177,6 +178,7 @@ async function setupDatabase() {
       valveThreeLinks,
       valveFourLinks,
       planetaryCylindricalGearboxLinks,
+      planetaryTransmissionTwoLinks,
     ];
 
     // Вставка данных в products, parts, part_alternative_sets

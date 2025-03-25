@@ -10,7 +10,7 @@ export const ProductGroupPage = () => {
   const { products, loading, error } = useAppSelector(
     (state) => state.products
   );
-  console.log(products);
+  // console.log(products);
   // Мемоизация фильтрации продуктов
   const filteredProducts = useMemo(() => {
     return products.filter((product) => product.head === Number(head));
@@ -58,7 +58,7 @@ export const ProductGroupPage = () => {
       }}
     >
       {filteredProducts.length > 0 ? (
-        filteredProducts.map(({ name, path, id, head }) => {
+        filteredProducts.map(({ name, path, id, head, drawing }) => {
           const productIcon = productsFront.find((p) => p.name === name)?.img;
 
           return (
@@ -83,7 +83,7 @@ export const ProductGroupPage = () => {
               color="inherit"
               onClick={() => navigate(`/${head}${path}`)}
             >
-              {name}
+              рис.{drawing} {name}
               {productIcon && <img src={productIcon} alt="иконка" width={50} />}
             </Button>
           );

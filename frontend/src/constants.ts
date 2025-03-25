@@ -26,7 +26,7 @@ export const productsFront = [
     name: "Уплотнение плунжера СИН32.02.108.500",
   },
   { head: 1, path: "sealPackage", name: "Пакет уплотнений СИН32.00.108.510" },
-  { head: 1, path: "housingSeal", name: "Уплотнение корпуса" },
+  { head: 1, path: "housingSeal", name: "Уплотнение корпуса СИН32.02.121.000" },
   {
     head: 1,
     path: "installingTheSensorIndicator",
@@ -55,7 +55,7 @@ export const productsFront = [
   {
     head: 1,
     path: "planetaryTransmission",
-    name: "Передача планетарная СИН32.02.600.000",
+    name: "Передача планетарная СИН32.02.600.100",
   },
   {
     head: 2,
