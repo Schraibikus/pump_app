@@ -3476,7 +3476,7 @@ export const threePlungerPumpTwoLinks: Product = {
       position: 20,
       name: "Шнур резиновый",
       description: "ф6,3мм L=2000",
-      quantity: 10,
+      quantity: 1,
       positioningTop: 87,
       positioningLeft: 33,
     },
