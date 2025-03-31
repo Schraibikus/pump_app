@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo, useCallback } from "react";
 import {
   Box,
   Button,
@@ -72,6 +72,16 @@ export const SchemeBuilder = ({
   const dispatch = useAppDispatch();
   const orderId = new URLSearchParams(location.search).get("orderId");
 
+  const totalItemsInOrder = globalOrderParts.length;
+  const totalPartsInOrder = globalOrderParts.reduce(
+    (sum, part) => sum + part.quantity,
+    0
+  );
+  const hasOrder = globalOrderParts && globalOrderParts.length > 0;
+  const hasAlternativeSets =
+    selectedItem?.alternativeSets &&
+    Object.keys(selectedItem.alternativeSets).length > 0;
+
   // Получаем все изделия текущей группы
   const groupProducts = useMemo(() => {
     if (!products.length) return [];
@@ -81,9 +91,14 @@ export const SchemeBuilder = ({
     );
   }, [products, productHead, productId]);
 
-  const handleIncrement = () => setQuantity((prev) => prev + 1);
-  const handleDecrement = () =>
-    setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
+  const handleIncrement = useCallback(
+    () => setQuantity((prev) => prev + 1),
+    []
+  );
+  const handleDecrement = useCallback(
+    () => setQuantity((prev) => (prev > 1 ? prev - 1 : 1)),
+    []
+  );
 
   // Используем кэшированные данные, если они есть
   const currentParts = cachedParts[productId] || parts;
@@ -94,19 +109,22 @@ export const SchemeBuilder = ({
     }
   }, [dispatch, productId, cachedParts]);
 
-  const handleOpen = (item: PartItem) => {
-    const initialSelectedSet = item.alternativeSets?.[lastSelectedSet]
-      ? lastSelectedSet
-      : "";
+  const handleOpen = useCallback(
+    (item: PartItem) => {
+      const initialSelectedSet = item.alternativeSets?.[lastSelectedSet]
+        ? lastSelectedSet
+        : "";
 
-    setSelectedItem({
-      ...item,
-      selectedSet: initialSelectedSet,
-    });
-    setOpen(true);
-  };
+      setSelectedItem({
+        ...item,
+        selectedSet: initialSelectedSet,
+      });
+      setOpen(true);
+    },
+    [lastSelectedSet]
+  );
 
-  const handleClose = () => setOpen(false);
+  const handleClose = useCallback(() => setOpen(false), []);
 
   useEffect(() => {
     setQuantity(1);
@@ -114,7 +132,7 @@ export const SchemeBuilder = ({
     setComment("");
   }, [selectedItem]);
 
-  const handleAddToOrder = () => {
+  const handleAddToOrder = useCallback(() => {
     if (selectedItem) {
       const newPart = {
         ...selectedItem,
@@ -150,17 +168,28 @@ export const SchemeBuilder = ({
         console.error("Ошибка при добавлении детали в заказ:", error);
       }
     }
-  };
+  }, [
+    selectedItem,
+    productId,
+    productName,
+    productDrawing,
+    quantity,
+    includeComment,
+    comment,
+    orderId,
+    dispatch,
+    navigate,
+  ]);
 
-  const handleConfirmAddToOrder = () => {
+  const handleConfirmAddToOrder = useCallback(() => {
     if (hasAlternativeSets && !selectedItem?.selectedSet) {
       alert("Выберите переменные данные перед добавлением в заказ!");
       return;
     }
     handleAddToOrder();
-  };
+  }, [hasAlternativeSets, selectedItem, handleAddToOrder]);
 
-  const handleSubmitOrder = async () => {
+  const handleSubmitOrder = useCallback(async () => {
     try {
       await dispatch(
         createOrder({
@@ -176,21 +205,14 @@ export const SchemeBuilder = ({
     } catch (error) {
       console.error("Ошибка при отправке заказа:", error);
     }
-  };
+  }, [dispatch, globalOrderParts, navigate]);
 
-  const handleRemoveFromOrder = (id: number) => {
-    dispatch(removePartFromOrder(id));
-  };
-
-  const totalItemsInOrder = globalOrderParts.length;
-  const totalPartsInOrder = globalOrderParts.reduce(
-    (sum, part) => sum + part.quantity,
-    0
+  const handleRemoveFromOrder = useCallback(
+    (id: number) => {
+      dispatch(removePartFromOrder(id));
+    },
+    [dispatch]
   );
-  const hasOrder = globalOrderParts && globalOrderParts.length > 0;
-  const hasAlternativeSets =
-    selectedItem?.alternativeSets &&
-    Object.keys(selectedItem.alternativeSets).length > 0;
 
   if (loading || orderLoading) {
     return (
@@ -305,7 +327,12 @@ export const SchemeBuilder = ({
         <Button
           variant="contained"
           onClick={() => navigate(`/${productHead}`)}
-          sx={{ m: 2, alignSelf: "flex-start", whiteSpace: "nowrap" }}
+          sx={{
+            m: 2,
+            alignSelf: "flex-start",
+            whiteSpace: "nowrap",
+            width: 200,
+          }}
         >
           На страницу изделия
         </Button>
@@ -313,7 +340,7 @@ export const SchemeBuilder = ({
         <Button
           variant="contained"
           onClick={() => setOrderOpen(true)}
-          sx={{ m: 2, alignSelf: "flex-start" }}
+          sx={{ m: 2, alignSelf: "flex-start", width: 200 }}
           disabled={!hasOrder}
         >
           Просмотреть заказ
