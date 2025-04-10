@@ -2,6 +2,7 @@ import { Box, Tabs, Tab } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useCallback, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { GlobalSearch } from "./GlobalSearch";
 
 export const HeaderBar = () => {
   const navigate = useNavigate();
@@ -41,7 +42,7 @@ export const HeaderBar = () => {
           setTabValue(3);
           break;
         default:
-          setTabValue(0); 
+          setTabValue(0);
       }
     }
   }, [location.pathname]);
@@ -98,7 +99,14 @@ export const HeaderBar = () => {
         }),
       }}
     >
-      <Box sx={{ display: "flex", justifyContent: "center" }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: 10,
+        }}
+      >
         <Tabs
           value={tabValue} // Начальное значение
           onChange={handleTabChange}
@@ -118,6 +126,7 @@ export const HeaderBar = () => {
           <Tab label="СИН32.00" />
           <Tab label="Заказы" />
         </Tabs>
+        <GlobalSearch />
       </Box>
     </Box>
   );

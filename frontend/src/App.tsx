@@ -10,6 +10,7 @@ import { OrdersPage } from "./pages/OrdersPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { ProductGroupPage } from "./pages/ProductGroupPage";
 import { OrderDone } from "./pages/OrderDone";
+import { fetchAllParts } from "./store/modules/parts/thunk";
 
 const App = () => {
   const dispatch = useAppDispatch();
@@ -19,6 +20,7 @@ const App = () => {
   useEffect(() => {
     if (!isLoaded) {
       dispatch(fetchProducts());
+      dispatch(fetchAllParts());
     }
   }, [dispatch, isLoaded]);
 

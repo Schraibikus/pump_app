@@ -1,8 +1,12 @@
+// thunk.ts
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { PartItem } from "@/types";
-import { AxiosError } from "axios";
-import { fetchProductPartsApi } from "@/store/modules/parts/apis";
+import {
+  fetchProductPartsApi,
+  fetchProductAllPartsApi,
+} from "@/store/modules/parts/apis";
+import type { PartItem } from "@/types";
 
+// Для деталей конкретного продукта
 export const fetchProductParts = createAsyncThunk<
   PartItem[],
   number,
@@ -14,19 +18,31 @@ export const fetchProductParts = createAsyncThunk<
       productParts: { cachedParts: Record<number, PartItem[]> };
     };
 
-    // Если данные уже загружены и есть в кэше, возвращаем их
     if (state.productParts.cachedParts[productId]) {
       return state.productParts.cachedParts[productId];
     }
 
     try {
-      const data = await fetchProductPartsApi(productId);
-      return data;
+      return await fetchProductPartsApi(productId);
     } catch (error) {
-      if (error instanceof AxiosError) {
-        return rejectWithValue(error.response?.data?.message);
-      }
-      return rejectWithValue("Неизвестная ошибка.");
+      return rejectWithValue(
+        error instanceof Error ? error.message : "Неизвестная ошибка"
+      );
     }
   }
 );
+
+// Для всех деталей
+export const fetchAllParts = createAsyncThunk<
+  PartItem[],
+  void,
+  { rejectValue: string }
+>("products/fetchAllParts", async (_, { rejectWithValue }) => {
+  try {
+    return await fetchProductAllPartsApi();
+  } catch (error) {
+    return rejectWithValue(
+      error instanceof Error ? error.message : "Неизвестная ошибка"
+    );
+  }
+});

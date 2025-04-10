@@ -11,6 +11,7 @@ export interface Product {
 
 export interface PartItem {
   id: number;
+  productId: number;
   partId?: number;
   parentProductId: Product["id"];
   productName: Product["name"];

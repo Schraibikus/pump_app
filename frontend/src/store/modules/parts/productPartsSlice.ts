@@ -1,21 +1,27 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchProductParts } from "@/store/modules/parts/thunk";
+import { fetchAllParts, fetchProductParts } from "@/store/modules/parts/thunk";
 import { PartItem } from "@/types";
 
 interface ProductPartsState {
   parts: PartItem[];
+  allParts: PartItem[];
   loading: boolean;
+  loadingAll: boolean;
   error: string | null;
+  errorAll: string | null;
   isLoaded: boolean; // Флаг, указывающий, были ли данные загружены
   cachedParts: Record<number, PartItem[]>; // Кэшированные данные по productId
 }
 
 const initialState: ProductPartsState = {
   parts: [],
+  allParts: [],
   loading: false,
+  loadingAll: false,
   error: null,
-  isLoaded: false, // Изначально данные не загружены
-  cachedParts: {}, // Кэш для частей по productId
+  errorAll: null,
+  isLoaded: false,
+  cachedParts: {},
 };
 
 const productPartsSlice = createSlice({
@@ -24,6 +30,7 @@ const productPartsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
+      // Обработчики для fetchProductParts
       .addCase(fetchProductParts.pending, (state) => {
         state.loading = true;
         state.error = null;
@@ -32,14 +39,26 @@ const productPartsSlice = createSlice({
         state.loading = false;
         state.parts = action.payload;
         state.isLoaded = true;
-
-        // Кэшируем данные по productId
-        const productId = action.meta.arg; // productId передается как аргумент в thunk
+        const productId = action.meta.arg;
         state.cachedParts[productId] = action.payload;
       })
       .addCase(fetchProductParts.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload as string;
+      })
+
+      // Обработчики для fetchAllParts
+      .addCase(fetchAllParts.pending, (state) => {
+        state.loadingAll = true;
+        state.errorAll = null;
+      })
+      .addCase(fetchAllParts.fulfilled, (state, action) => {
+        state.loadingAll = false;
+        state.allParts = action.payload;
+      })
+      .addCase(fetchAllParts.rejected, (state, action) => {
+        state.loadingAll = false;
+        state.errorAll = action.payload as string;
       });
   },
 });
