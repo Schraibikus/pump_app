@@ -205,7 +205,7 @@ export const GlobalSearch = () => {
                       >
                         <ListItemText
                           primary={
-                            <Box>
+                            <>
                               {highlightMatch(product.name, searchQuery)}
                               <Typography
                                 component="span"
@@ -219,7 +219,7 @@ export const GlobalSearch = () => {
                                 )}
                                 )
                               </Typography>
-                            </Box>
+                            </>
                           }
                         />
                       </ListItem>
@@ -252,7 +252,7 @@ export const GlobalSearch = () => {
                       >
                         <ListItemText
                           primary={
-                            <Box>
+                            <>
                               {highlightMatch(part.name, searchQuery)}
                               <Typography
                                 component="span"
@@ -262,10 +262,10 @@ export const GlobalSearch = () => {
                               >
                                 (изделие: {part.productName})
                               </Typography>
-                            </Box>
+                            </>
                           }
                           secondary={
-                            <Box component="div">
+                            <>
                               {part.position && (
                                 <Typography component="div">
                                   Позиция:{" "}
@@ -275,7 +275,6 @@ export const GlobalSearch = () => {
                                   )}
                                 </Typography>
                               )}
-
                               {part.description && (
                                 <Typography component="div">
                                   Описание:{" "}
@@ -285,7 +284,6 @@ export const GlobalSearch = () => {
                                   )}
                                 </Typography>
                               )}
-
                               {part.designation && (
                                 <Typography component="div">
                                   Обозначение:{" "}
@@ -295,7 +293,6 @@ export const GlobalSearch = () => {
                                   )}
                                 </Typography>
                               )}
-
                               {part.quantity && (
                                 <Typography component="div">
                                   Количество:{" "}
@@ -305,7 +302,6 @@ export const GlobalSearch = () => {
                                   )}
                                 </Typography>
                               )}
-
                               {part.drawing && (
                                 <Typography component="div">
                                   Рисунок:{" "}
@@ -315,9 +311,8 @@ export const GlobalSearch = () => {
                                   )}
                                 </Typography>
                               )}
-                            </Box>
+                            </>
                           }
-                          secondaryTypographyProps={{ component: "div" }}
                         />
                       </ListItem>
                     ))}
