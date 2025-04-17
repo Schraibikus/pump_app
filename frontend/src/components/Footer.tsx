@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -18,7 +19,10 @@ export const Footer = () => {
         Copyright 2025
       </Typography>{" "}
       <Typography sx={{ fontSize: 12, fontWeight: 400 }}>
-        created by @Schraibikus
+        created by
+        <Link to="https://github.com/Schraibikus" target="_blank">
+          @Schraibikus
+        </Link>
       </Typography>
     </Box>
   );
