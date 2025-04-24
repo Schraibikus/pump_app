@@ -90,95 +90,12 @@
 
 ---
 
-## 3. **Использование `rsync` для синхронизации файлов**
 
-Если вы хотите синхронизировать только изменённые файлы, используйте `rsync`.
-
-### Шаги:
-1. **Синхронизируйте файлы**:
-   - Выполните команду на локальной машине:
-     ```bash
-     rsync -avz -e ssh /путь/к/локальной/директории/pump_app/ user1@87.242.117.41:/home/user1/app/
-     ```
-   - Флаг `-a` сохраняет права доступа, `-v` выводит подробную информацию, `-z` сжимает данные при передаче.
-
-2. **Перезапустите контейнеры**:
-   - Подключитесь к серверу:
-     ```bash
-     ssh user1@87.242.117.41
-     ```
-   - Перейдите в директорию с проектом:
-     ```bash
-     cd /home/user1/app
-     ```
-   - Пересоберите и перезапустите контейнеры:
-     ```bash
-     docker-compose up --build -d
-     ```
-
-3. **Проверьте логи**:
-   - Убедитесь, что приложение запустилось без ошибок:
-     ```bash
-     docker-compose logs -f
-     ```
-
----
-
-## 4. **Автоматизация с помощью CI/CD (опционально)**
-
-Если вы хотите автоматизировать процесс обновления, настройте CI/CD (Continuous Integration/Continuous Deployment). Например, с помощью GitHub Actions, GitLab CI или Jenkins.
-
-### Пример с GitHub Actions:
-1. Создайте файл `.github/workflows/deploy.yml` в вашем репозитории:
-   ```yaml
-   name: Deploy to Server
-
-   on:
-     push:
-       branches:
-         - main
-
-   jobs:
-     deploy:
-       runs-on: ubuntu-latest
-       steps:
-         - name: Checkout code
-           uses: actions/checkout@v3
-
-         - name: Copy files to server
-           uses: appleboy/scp-action@master
-           with:
-             host: 87.242.117.41
-             username: user1
-             key: ${{ secrets.SSH_PRIVATE_KEY }}
-             source: "."
-             target: "/home/user1/app"
-
-         - name: Restart Docker containers
-           uses: appleboy/ssh-action@master
-           with:
-             host: 87.242.117.41
-             username: user1
-             key: ${{ secrets.SSH_PRIVATE_KEY }}
-             script: |
-               cd /home/user1/app
-               docker-compose up --build -d
-   ```
-
-2. Добавьте SSH-ключ в секреты GitHub:
-   - Перейдите в настройки репозитория → Secrets and variables → Actions.
-   - Добавьте новый секрет с именем `SSH_PRIVATE_KEY` и вставьте содержимое вашего приватного SSH-ключа.
-
-3. После настройки каждый пуш в ветку `main` будет автоматически разворачивать изменения на сервере.
-
----
-
-## 5. **Заключение**
+## 3. **Заключение**
 Теперь вы знаете, как обновить код приложения на сервере после внесения изменений локально. Вы можете использовать:
 - `scp` для ручного копирования файлов.
 - `git` для автоматического обновления через репозиторий.
-- `rsync` для синхронизации изменённых файлов.
-- CI/CD для полной автоматизации.
+
 
 
 Чтобы очистить базу данных на сервере и заново запустить миграции, выполните следующие шаги. Предположим, что вы используете Docker и `docker-compose` для управления вашим приложением и базой данных.

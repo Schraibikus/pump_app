@@ -1,6 +1,7 @@
 version: '3.8'
 services:
   postgres:
+    restart: always
     image: postgres:16
     env_file: .env
     environment:
@@ -20,6 +21,7 @@ services:
       retries: 5
 
   backend:
+    restart: always
     build:
       context: ./backend
       dockerfile: Dockerfile
@@ -43,6 +45,7 @@ services:
       - pump-app-network
 
   frontend:
+    restart: always
     build:
       context: ./frontend
       dockerfile: Dockerfile
@@ -51,7 +54,7 @@ services:
         - VITE_API_BASE_URL=${VITE_API_BASE_URL}
     env_file: .env
     ports:
-      - "80:80"
+      - "3002:80"
     depends_on:
       - backend
     networks:
