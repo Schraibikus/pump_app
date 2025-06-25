@@ -33,13 +33,15 @@ export const HeaderBar = () => {
       setTabValue(1);
     } else if (location.pathname.startsWith("/2")) {
       setTabValue(2);
+    } else if (location.pathname.startsWith("/3")) {
+      setTabValue(3);
     } else {
       switch (location.pathname) {
         case "/":
           setTabValue(0);
           break;
         case "/orders":
-          setTabValue(3);
+          setTabValue(4);
           break;
         default:
           setTabValue(0);
@@ -60,6 +62,9 @@ export const HeaderBar = () => {
         navigate("/2");
         break;
       case 3:
+        navigate("/3");
+        break;
+      case 4:
         navigate("/orders");
         break;
       default:
@@ -124,6 +129,7 @@ export const HeaderBar = () => {
           <Tab label="На главную" />
           <Tab label="СИН32.02" />
           <Tab label="СИН32.00" />
+          <Tab label="СИН59.00" />
           <Tab label="Заказы" />
         </Tabs>
         <GlobalSearch />

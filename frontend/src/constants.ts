@@ -109,6 +109,16 @@ export const productsFront = [
     path: "planetaryCylindricalGearbox",
     name: "Редуктор планетарно-цилиндрический СИН32.00",
   },
+  {
+    head: 3,
+    path: "transmissionBox",
+    name: "Коробка передач СИН59.00 (вид сбоку)",
+  },
+  {
+    head: 3,
+    path: "transmissionBoxTwo",
+    name: "Коробка передач СИН59.00",
+  },
 ];
 
 export const mainPageProducts = [
@@ -121,5 +131,10 @@ export const mainPageProducts = [
     head: "/2",
     path: "/png/sin32_00/sin32_00.png",
     name: "НАСОС ТРЁХПЛУНЖЕРНЫЙ СИН32.00",
+  },
+  {
+    head: "/3",
+    path: "/png/sin59_00/sin59_00.png",
+    name: "КОРОБКА ПЕРЕДАЧ СИН59.00",
   },
 ];
