@@ -81,7 +81,7 @@ export const HeaderBar = () => {
         boxSizing: "border-box",
         position: "fixed",
         top: 0,
-        height: 70,
+        height: 80,
         zIndex: 50,
         // backgroundImage: "url(/png/tile_background_4.png)",
         backdropFilter: isHeaderVisible ? "blur(5px)" : "none", // Размытие при скролле
