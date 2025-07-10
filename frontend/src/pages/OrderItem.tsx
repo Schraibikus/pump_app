@@ -283,7 +283,13 @@ export const OrderItem = ({
                     ...new Set(productsFront.map((product) => product.head)),
                   ].map((head) => (
                     <MenuItem key={head} value={head}>
-                      {head === 1 ? "СИН32.02" : head === 2 ? "СИН32.00" : head}
+                      {head === 1
+                        ? "СИН32.02"
+                        : head === 2
+                          ? "СИН32.00"
+                          : head === 3
+                            ? "СИН59.00"
+                            : head}
                     </MenuItem>
                   ))}
                 </Select>

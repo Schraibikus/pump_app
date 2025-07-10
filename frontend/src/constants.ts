@@ -112,11 +112,6 @@ export const productsFront = [
   {
     head: 3,
     path: "transmissionBox",
-    name: "Коробка передач СИН59.00 (вид сбоку)",
-  },
-  {
-    head: 3,
-    path: "transmissionBoxTwo",
     name: "Коробка передач СИН59.00",
   },
 ];
