@@ -1,12 +1,9 @@
 import { Button, Menu, MenuItem } from "@mui/material";
 import { useState } from "react";
-import {
-  exportOrderToDoc,
-} from "@/utils/exportOrderToDoc"; 
-import {
-  exportOrderToPdf,
-} from "@/utils/exportOrderToPdf"; // Укажите правильный путь
+import { exportOrderToDoc } from "@/utils/exportOrderToDoc";
+import { exportOrderToPdf } from "@/utils/exportOrderToPdf"; // Укажите правильный путь
 import { Order } from "@/types";
+import { exportOrderToExcel } from "@/utils/exportOrderToExel";
 
 export const ExportDropdown = ({ order }: { order: Order }) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -22,11 +19,7 @@ export const ExportDropdown = ({ order }: { order: Order }) => {
 
   return (
     <>
-      <Button
-        variant="contained"
-        color="secondary"
-        onClick={handleMenuOpen}
-      >
+      <Button variant="contained" color="secondary" onClick={handleMenuOpen}>
         Экспорт
       </Button>
       <Menu anchorEl={anchorEl} open={open} onClose={handleMenuClose}>
@@ -46,8 +39,15 @@ export const ExportDropdown = ({ order }: { order: Order }) => {
         >
           Экспорт в DOC
         </MenuItem>
+        <MenuItem
+          onClick={() => {
+            exportOrderToExcel(order, `order_${order.id}.xlsx`);
+            handleMenuClose();
+          }}
+        >
+          Экспорт в Excel
+        </MenuItem>
       </Menu>
     </>
   );
 };
-
