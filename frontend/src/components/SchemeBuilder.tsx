@@ -229,88 +229,92 @@ export const SchemeBuilder = ({
   return (
     <Box sx={{ position: "relative", mt: 5, px: 5 }}>
       {/* Кнопка вызова Drawer с другими изделиями группы */}
-      <IconButton
-        onClick={() => setDrawerOpen(true)}
-        sx={{
-          position: "fixed",
-          top: 100,
-          right: 20,
-          zIndex: 1200,
-          backgroundColor: "background.paper",
-          boxShadow: 3,
-          "&:hover": {
-            bgcolor: "primary.main",
-          },
-        }}
-        title="Другие изделия группы"
-      >
-        <MenuIcon fontSize="large" />
-      </IconButton>
+      {groupProducts.length > 0 && (
+        <>
+          <IconButton
+            onClick={() => setDrawerOpen(true)}
+            sx={{
+              position: "fixed",
+              top: 100,
+              right: 20,
+              zIndex: 1200,
+              backgroundColor: "background.paper",
+              boxShadow: 3,
+              "&:hover": {
+                bgcolor: "primary.main",
+              },
+            }}
+            title="Другие изделия группы"
+          >
+            <MenuIcon fontSize="large" />
+          </IconButton>
+          <Drawer
+            anchor="right"
+            open={drawerOpen}
+            onClose={() => setDrawerOpen(false)}
+            sx={{
+              "& .MuiDrawer-paper": {
+                width: 350,
+                boxSizing: "border-box",
+                p: 2,
+                backgroundImage: "url(/png/tile_background_4.png)",
+              },
+            }}
+          >
+            <Typography variant="h6" sx={{ p: 2 }}>
+              Изделия группы
+            </Typography>
+            <Divider />
+            <Box
+              sx={{
+                overflowY: "auto",
+                maxHeight: "calc(100vh - 100px)",
+                display: "flex",
+                flexDirection: "column",
+                gap: 1,
+              }}
+            >
+              {groupProducts.map((product) => {
+                const productIcon = productsFront.find(
+                  (p) => p.name === product.name
+                )?.img;
 
-      {/* Drawer с изделиями группы */}
-      <Drawer
-        anchor="right"
-        open={drawerOpen}
-        onClose={() => setDrawerOpen(false)}
-        sx={{
-          "& .MuiDrawer-paper": {
-            width: 350,
-            boxSizing: "border-box",
-            p: 2,
-            backgroundImage: "url(/png/tile_background_4.png)",
-          },
-        }}
-      >
-        <Typography variant="h6" sx={{ p: 2 }}>
-          Изделия группы
-        </Typography>
-        <Divider />
-        <Box
-          sx={{
-            overflowY: "auto",
-            maxHeight: "calc(100vh - 100px)",
-            display: "flex",
-            flexDirection: "column",
-            gap: 1,
-          }}
-        >
-          {groupProducts.map((product) => {
-            const productIcon = productsFront.find(
-              (p) => p.name === product.name
-            )?.img;
-
-            return (
-              <Box key={product.id}>
-                <Button
-                  fullWidth
-                  variant="outlined"
-                  color="inherit"
-                  sx={{
-                    justifyContent: "space-between",
-                    p: 1,
-                    textAlign: "left",
-                    backgroundColor:
-                      product.id === productId ? "action.selected" : "inherit",
-                    "&:hover": {
-                      color: "white",
-                      bgcolor: "primary.main",
-                    },
-                  }}
-                  onClick={() => {
-                    navigate(`/${product.head}${product.path}`);
-                    setDrawerOpen(false);
-                  }}
-                >
-                  рис.{product.drawing} {product.name}
-                  {productIcon && (
-                    <img src={productIcon} alt="иконка" width={30} />
-                  )}
-                </Button>
-              </Box>
-            );
-          })}
-        </Box>
-      </Drawer>
+                return (
+                  <Box key={product.id}>
+                    <Button
+                      fullWidth
+                      variant="outlined"
+                      color="inherit"
+                      sx={{
+                        justifyContent: "space-between",
+                        p: 1,
+                        textAlign: "left",
+                        backgroundColor:
+                          product.id === productId
+                            ? "action.selected"
+                            : "inherit",
+                        "&:hover": {
+                          color: "white",
+                          bgcolor: "primary.main",
+                        },
+                      }}
+                      onClick={() => {
+                        navigate(`/${product.head}${product.path}`);
+                        setDrawerOpen(false);
+                      }}
+                    >
+                      рис.{product.drawing} {product.name}
+                      {productIcon && (
+                        <img src={productIcon} alt="иконка" width={30} />
+                      )}
+                    </Button>
+                  </Box>
+                );
+              })}
+            </Box>
+          </Drawer>
+        </>
+      )}
 
       {/* Существующие кнопки навигации */}
       <Box
@@ -356,9 +360,7 @@ export const SchemeBuilder = ({
           </>
         )}
       </Box>
-
       <ScrollToTopButton />
-
       <Box sx={{ mt: 2, textAlign: "center" }}>
         <Typography sx={{ fontSize: 20, mb: 2 }}>
           Рисунок № {productDrawing} {productName}
@@ -389,16 +391,16 @@ export const SchemeBuilder = ({
                     color:
                       item.alternativeSets &&
                       Object.keys(item.alternativeSets).length > 0
-                        ? "rgba(255, 0, 0, 0.7)"
-                        : "rgba(0, 0, 255, 0.7)",
+                        ? "rgba(255, 0, 0)"
+                        : "rgba(0, 0, 255)",
                     borderRadius: "5px",
+                    transition: "none",
                     py: 0.5,
                     px: 0.5,
                     minWidth: 30,
                     fontSize: 20,
                     "&:hover": {
-                      backgroundColor: "rgba(112, 171, 248, 0.9)",
-                      boxShadow: "0px 20px 35px rgba(0, 0, 0, 0.06)",
+                      backgroundColor: "rgba(112, 171, 248)",
                       transform: "translateY(-5px)",
                       color: "#000",
                     },
